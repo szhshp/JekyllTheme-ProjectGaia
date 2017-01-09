@@ -6,6 +6,14 @@ This is a personal Jekyll blog theme.
 
 The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
 
+![](    Demo/1.jpg  )
+
+![](    Demo/2.jpg  )
+
+![](    Demo/3.jpg  )
+
+![](    Demo/4.jpg  )
+
 ## Demo
 
 See demo page here: [    Demo Page   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
