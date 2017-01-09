@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html lang="{{ site.lang }}">
+
+  <body>
+
+    {% include navigation_sub.html %}
+
+    <section class="container content-section" style="font-c">
+      <div class="row">
+        <div class="col-md-12">
+
+          <h1><strong>{{ page.title }}</strong></h1>
+          <hr style="height:1px;border:none;border-top:1px solid #555555;" />
+
+          {{ page.content | markdownify }}
+
+        </div>
+      </div>
+    </section>
+    {% include js.html %}
+    {% include styles.html %}
+  </body>
+</html>
+
+<!-- Post Layout End -->

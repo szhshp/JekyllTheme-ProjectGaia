@@ -1,0 +1,71 @@
+<!-- This is the navigation for sub pages -->
+<!-- All link will redirect -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars"></i></a>
+
+<nav id="sidebar-wrapper">
+  <ul class="nav" role="tablist">
+    <a id="menu-close" href="#" class="btn btn-light btn-sm pull-right toggle">
+      <i class="fa fa-times"></i>
+    </a>
+
+    <ul>
+      <li class="headerlink">
+        <a class="content active">List</a>
+        <a class="link inactived">Link</a>
+      </li>
+    </ul>
+  </ul>
+
+  <br>
+  <ul id="link" style="display:none;" class="sidebar-nav">
+    <li>
+      <a href="/index" onclick = $("#menu-close").click();>
+        <img width="20px" width="20px">&nbsp;&nbsp;Home  
+      </a>
+    </li>
+    <li>
+      <a href="/index" onclick = $("#menu-close").click(); >
+        <span class="glyphicon glyphicon-book"></span>
+        <img width="20px" width="20px">Archives  
+      </a>
+    </li>
+    <li>
+      <a href="/categories.html" onclick = $("#menu-close").click(); >
+      <span class="glyphicon glyphicon-tag"></span>
+        <img width="20px" width="20px" >Categories 
+      </a>
+    </li>
+    <li>
+      <a href="/index#search" onclick = $("#menu-close").click(); >
+        <span class="glyphicon glyphicon-search"></span>
+        <img width="20px" width="20px">Search
+      </a>
+    </li>
+    <li>
+      <a href="/about" onclick = $("#menu-close").click(); >
+        <span class="glyphicon glyphicon-user"></span>
+        <img width="20px" width="20px">About
+      </a>
+    </li>
+  </ul>
+  <ul id="toc" class="sidebar-nav"></ul>
+</nav>
+<script>
+  $(document).ready(function(){
+    $("a.content").click(function(){
+      $("ul#link").fadeOut(500,function(){
+        $("ul#toc").fadeIn(500);
+      });
+      $("a.link").removeClass("active");
+      $(this).addClass("active");
+    });
+    $("a.link").click(function(){
+      $("ul#toc").fadeOut(500,function(){
+        $("ul#link").fadeIn(500);
+      });
+      $("a.content").removeClass("active");
+      $(this).addClass("active");
+    });
+    $("#menu-close").click();
+  });
+</script>

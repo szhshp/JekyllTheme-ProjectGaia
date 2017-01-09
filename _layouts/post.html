@@ -1,0 +1,60 @@
+<!-- Post Layout Start -->
+
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html lang="{{ site.lang }}">
+
+  <body>
+    {% include js.html %}
+    {% include head.html %}
+    {% include navigation_sub.html %}
+
+    <section class="container content-section" style="font-c">
+      <div class="row">
+      <div class="col-md-12" id="subcontainer">
+      <br>
+          <div class="col-md-8">
+            <h1><strong>{{ page.title }}</strong></h1>
+            {{ page.date | date_to_string }}<br>
+            <hr style="height:1px;border:none;border-top:1px solid #C9C9C9;" />
+
+            {{ page.content | markdownify }}
+
+              <!-- UY BEGIN -->
+              <div id="uyan_frame">
+              </div>
+              <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=xxxxx"></script>
+              <!-- UY END -->
+          </div>
+
+          <div class="col-md-4" style="height:100px"></div>
+         
+
+          <div class="col-md-4">
+
+            <h4>Categories:</h4>
+            {% for cat in page.categories %}
+            <a href="/categories.html">{{ cat }}</a>
+            {% endfor %}<br>
+            <h4>Tags:</h4>
+            {% for tag in page.tags %}
+            <a href="/categories.html">#{{ tag }}</a>
+            {% endfor %}
+          </div>
+          <div class="col-md-4">
+            <h4>Recent Posts</h4>
+             {% for post in site.posts limit:5 %}
+             <li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+             {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include styles.html %}
+    {% include footer.html %}
+    {% include highlighter.html %}
+    {% include js-post.html %}
+
+  </body>
+</html>
+<!-- Post Layout End -->

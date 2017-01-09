@@ -1,0 +1,42 @@
+<!-- toc list -->
+<script src="/js/awesome-toc.min.js" type='text/javascript'></script>
+
+<!-- Header collapse -->
+<script src="/js/md-post-header-collapse.js"></script>
+
+<script>
+	/* toc list */
+	$.awesome_toc({        
+		autoDetectHeadings: true,
+		enableToTopButton: false,
+		css: {
+			fontSize: "13px",
+			largeFontSize: "18px",
+		},
+	});
+
+	/* toc list number rebuild */
+	var level1Index = 0;
+	var level2Index = 0;
+	var level3Index = 0;
+	$.each($('#toc li'), function( index, value ) {
+		
+		var paddingLength = $('#toc li')[index].style['padding-left'].split("px")[0];/* padding length */
+		var elem = $($('#toc li')[index]).find('a');
+		var originalTitle = elem.html();/* original title */
+
+		if (paddingLength == presetPaddingLength) {/* Head 1 */
+			elem.text((++level1Index) + '. ' + originalTitle);
+			level2Index = 0;
+			level3Index = 0;
+		}else if (paddingLength == 2 * presetPaddingLength) {/* Head 2 */
+			elem.text(level1Index + '.' + (++level2Index) + '. ' +originalTitle);
+			level3Index = 0;
+		}else if (paddingLength == 3 * presetPaddingLength) {/* Head 3 */
+			elem.text(level1Index + '.' + level2Index + '.' + (++level3Index) + '. ' + originalTitle);
+
+		}
+	});
+
+	headerCollapsible()
+</script>

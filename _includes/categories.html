@@ -1,0 +1,74 @@
+<!-- For category collapse  -->
+<script src="/js/sco.collapse.js"></script>
+<script src="/js/sco.message.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/sco.message.css"/>
+
+<style>
+  #archives{
+    background: #D0DDC4;
+    padding: 50px 0;
+  }
+  .postlink_div{
+    height:30px;
+  }
+</style>
+
+<script>
+  $(document).ready(function(){
+    $.scojs_message('Click to show posts', $.scojs_message.TYPE_OK);
+  });
+</script>
+
+<section id="archives" class="archives">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>分类</h2>
+        <br>
+
+        <ul class="nav nav-list">
+          {% for cat in site.categories %}
+          <li>
+            <a name="{{cat[0]}}" href="#" data-trigger="collapse" data-parent=".nav" style="font-size:20px;" >{{ cat[0] }}</a>
+            <div class="collapsible" style="display: none;">
+               {% for post in cat[1] %}
+                <div class="postlink_div">
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <a href="{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
+                   &nbsp;&nbsp;{{ post.date | date: "%Y-%m-%d" }}
+                 </div>
+               {% endfor %}
+            </div>
+         </li>
+          {% endfor %}
+        </ul>
+        
+      </div> 
+       <div class="col-md-6">
+        <h2>标签</h2>
+        <br>
+
+
+        <ul class="nav nav-list">
+          {% for tag in site.tags %}
+          <li>
+            <a name="{{ tag[0] }}" href="#" data-trigger="collapse" data-parent=".nav" style="font-size:20px;" >{{ tag[0] }}</a>
+            <div class="collapsible" style="display: none;">
+              {% for post in tag[1] %}
+                <div class="postlink_div">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
+                 &nbsp;&nbsp;{{ post.date | date: "%Y-%m-%d" }}
+               </div>
+              {% endfor %}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div> 
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br>
+</section>
