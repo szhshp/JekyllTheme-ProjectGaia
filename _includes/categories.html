@@ -35,7 +35,7 @@
                 <div class="postlink_div">
 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <a href="{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
+                   <a href="{{site.url}}{{site.baseurl}}{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
                    &nbsp;&nbsp;{{ post.date | date: "%Y-%m-%d" }}
                  </div>
                {% endfor %}
@@ -58,7 +58,7 @@
               {% for post in tag[1] %}
                 <div class="postlink_div">
                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <a href="{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
+                 <a href="{{site.url}}{{site.baseurl}}{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
                  &nbsp;&nbsp;{{ post.date | date: "%Y-%m-%d" }}
                </div>
               {% endfor %}
