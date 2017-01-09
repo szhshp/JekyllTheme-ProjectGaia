@@ -7,17 +7,9 @@ tags : [intro, tag1, tag2]
 
 ## Desc
 
-This is a personal Jekyll blog theme.
+This is a personal blog source code.
 
 The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
-
-## Demo
-
-See repo here: [   szhielelp/JekyllTheme-ProjectGaia    ](https://github.com/szhielelp/JekyllTheme-ProjectGaia)
-
-See demo blog here: [    Blog Page   ](http://szhshp.org/)
-
-See chinese guide post here: [   中文指导    ](http://szhshp.org/tech/2017/01/09/projectgaia.html)
 
 ## Post Example
 
