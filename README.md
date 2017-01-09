@@ -1,12 +1,18 @@
+# Project Gaia
+
 ## Desc
 
-This is a personal blog source code.
+This is a personal Jekyll blog theme.
 
 The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
 
 ## Demo
 
 See demo page here: [    Demo Page   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
+
+See demo blog here: [    Blog Page   ](http://szhshp.org/)
+
+See chinese guide post here: [   中文指导    ](http://szhshp.org/tech/2017/01/09/projectgaia.html)
 
 ## Plugins
 
