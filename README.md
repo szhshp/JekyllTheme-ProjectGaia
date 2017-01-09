@@ -4,9 +4,9 @@ This is a personal blog source code.
 
 The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
 
-## Post Example
+## Demo
 
-Here is a post example
+See demo page here: [    Demo Page   ](https://github.com/szhielelp/JekyllTheme-ProjectGaia)
 
 ## Plugins
 
