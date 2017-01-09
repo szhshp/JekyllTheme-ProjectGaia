@@ -6,7 +6,7 @@ The theme name is 'Project Gaia', cuz I have another under building project name
 
 ## Demo
 
-See demo page here: [    Demo Page   ](https://github.com/szhielelp/JekyllTheme-ProjectGaia)
+See demo page here: [    Demo Page   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
 
 ## Plugins
 
