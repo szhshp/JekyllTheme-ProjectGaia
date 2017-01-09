@@ -34,11 +34,11 @@
 
             <h4>Categories:</h4>
             {% for cat in page.categories %}
-            <a href="/categories.html">{{ cat }}</a>
+            <a href="{{site.url}}{{site.baseurl}}/categories.html">{{ cat }}</a>
             {% endfor %}<br>
             <h4>Tags:</h4>
             {% for tag in page.tags %}
-            <a href="/categories.html">#{{ tag }}</a>
+            <a href="{{site.url}}{{site.baseurl}}/categories.html">#{{ tag }}</a>
             {% endfor %}
           </div>
           <div class="col-md-4">

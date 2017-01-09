@@ -7,7 +7,6 @@
     <a id="menu-close" href="#" class="btn btn-light btn-sm pull-right toggle">
       <i class="fa fa-times"></i>
     </a>
-
     <ul>
       <li class="headerlink">
         <a class="content active">List</a>
@@ -19,30 +18,30 @@
   <br>
   <ul id="link" style="display:none;" class="sidebar-nav">
     <li>
-      <a href="/index" onclick = $("#menu-close").click();>
+      <a href="{{site.url}}{{site.baseurl}}/index" onclick = $("#menu-close").click();>
         <img width="20px" width="20px">&nbsp;&nbsp;Home  
       </a>
     </li>
     <li>
-      <a href="/index" onclick = $("#menu-close").click(); >
+      <a href="{{site.url}}{{site.baseurl}}/index" onclick = $("#menu-close").click(); >
         <span class="glyphicon glyphicon-book"></span>
         <img width="20px" width="20px">Archives  
       </a>
     </li>
     <li>
-      <a href="/categories.html" onclick = $("#menu-close").click(); >
+      <a href="{{site.url}}{{site.baseurl}}/categories.html" onclick = $("#menu-close").click(); >
       <span class="glyphicon glyphicon-tag"></span>
         <img width="20px" width="20px" >Categories 
       </a>
     </li>
     <li>
-      <a href="/index#search" onclick = $("#menu-close").click(); >
+      <a href="{{site.url}}{{site.baseurl}}/index#search" onclick = $("#menu-close").click(); >
         <span class="glyphicon glyphicon-search"></span>
         <img width="20px" width="20px">Search
       </a>
     </li>
     <li>
-      <a href="/about" onclick = $("#menu-close").click(); >
+      <a href="{{site.url}}{{site.baseurl}}/about" onclick = $("#menu-close").click(); >
         <span class="glyphicon glyphicon-user"></span>
         <img width="20px" width="20px">About
       </a>
