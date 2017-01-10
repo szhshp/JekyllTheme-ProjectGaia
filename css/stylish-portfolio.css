@@ -73,7 +73,7 @@ hr.small {
     height: 100%;
     margin-right: -250px;
     overflow-y: auto;
-    background: rgba(0, 0, 0, 0.75);
+    background: black;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -91,7 +91,7 @@ hr.small {
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 30px;
 }
 
 .sidebar-nav li a {
@@ -273,4 +273,25 @@ span.headerbtn.glyphicon {
     padding-right: 5px;
     color: rgb(161, 161, 161);
     opacity: 0.4;
+}
+
+img.site-author-image {
+    width: 80px;
+}
+
+div#header {
+    text-align: center;
+    padding: 20px 0px 40px 0px;
+}
+
+a#menu-close {
+    background-color: transparent;
+}
+
+nav#sidebar-wrapper span.glyphicon {
+    margin-right: 20px;
+}
+
+nav#sidebar-wrapper span.glyphicon.glyphicon-remove {
+    color: white;
 }

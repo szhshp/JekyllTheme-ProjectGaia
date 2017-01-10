@@ -1,0 +1,41 @@
+<div>
+	<ul id="link" class="sidebar-nav">
+		<!-- put header herer so when the tab changes the header hide together  -->
+		<div id="header">
+			<img class="site-author-image" itemprop="image" src="/img/headshot.png">
+			<div>Szhshp</div>
+		</div>
+		<li>
+			<a href="/index.html" onclick = $("#menu-close").click(); >
+				<span class="glyphicon glyphicon-home"></span>
+				Home  
+			</a>
+		</li>
+		<li>
+			<a href="/index.html#archives" onclick = $("#menu-close").click();>
+				<span class="glyphicon glyphicon-list"></span>
+				Archives  
+				<span class="label label-info">{{ site.posts.size}}</span>
+			</a>
+		</li>
+		<li>
+			<a href="/categories.html" onclick = $("#menu-close").click(); >
+				<span class="glyphicon glyphicon-tag"></span>
+				Categories 
+				<span class="label label-info">{{ site.categories.size}}</span>
+			</a>
+		</li>
+		<li>
+			<a href="/index.html#search" onclick = $("#menu-close").click(); >
+				<span class="glyphicon glyphicon-search"></span>
+				Search
+			</a>
+		</li>
+		<li>
+			<a href="/about.html" onclick = $("#menu-close").click();>
+				<span class="glyphicon glyphicon-user"></span>
+				About
+			</a>
+		</li>
+	</ul>
+</div>

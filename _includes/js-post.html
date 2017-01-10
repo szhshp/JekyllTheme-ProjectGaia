@@ -39,4 +39,20 @@
 	});
 
 	headerCollapsible()
+
+	/*  toc list click effect */
+	$("a.content").click(function(){
+		$("ul#link").fadeOut(500,function(){
+			$("ul#toc").fadeIn(500);
+		});
+		$("a.link").removeClass("active");
+		$(this).addClass("active");
+	});
+	$("a.link").click(function(){
+		$("ul#toc").fadeOut(500,function(){
+			$("ul#link").fadeIn(500);
+		});
+		$("a.content").removeClass("active");
+		$(this).addClass("active");
+	});
 </script>

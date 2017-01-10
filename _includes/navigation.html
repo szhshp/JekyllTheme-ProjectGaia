@@ -1,35 +1,17 @@
-<a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars"></i></a>
+<!-- Sidebar in non-post page -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle animated infinite tada">
+	<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+</a>
 <nav id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-    <a id="menu-close" href="#" class="btn btn-light btn-sm pull-right toggle">
-      <i class="fa fa-times"></i>
-    </a>
-    <li class="sidebar-brand">
-      <a href="{{site.url}}{{site.baseurl}}/index.html#top" class="active" onclick = $("#menu-close").click(); >Home</a>
-    </li>
-    <li>
-      <a href="#archives" onclick = $("#menu-close").click(); >
-        <span class="glyphicon glyphicon-book"></span>
-        <img width="20px" width="20px">Archives  
-      </a>
-    </li>
-    <li>
-      <a href="{{site.url}}{{site.baseurl}}/categories.html" onclick = $("#menu-close").click(); >
-        <span class="glyphicon glyphicon-tag"></span>
-        <img width="20px" width="20px">Categories 
-      </a>
-    </li>
-    <li>
-      <a href="{{site.url}}{{site.baseurl}}/index#search" onclick = $("#menu-close").click(); >
-        <span class="glyphicon glyphicon-search"></span>
-        <img width="20px" width="20px">Search
-      </a>
-    </li>
-    <li>
-      <a href="{{site.url}}{{site.baseurl}}/about.html" onclick = $("#menu-close").click(); >
-        <span class="glyphicon glyphicon-user"></span>
-        <img width="20px" width="20px">About
-      </a>
-    </li>
-  </ul>
+	<ul class="nav" role="tablist" style="padding-bottom:20px">
+		<a id="menu-close" href="#" class="btn btn-light btn-sm pull-right toggle">
+   			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</a>
+		<ul>
+			<li class="headerlink">
+				<a href="/index.html#top" class="content active" onclick = $("#menu-close").click(); >Home</a>
+			</li>
+		</ul>
+	</ul>
+	{% include links.html %}
 </nav>
