@@ -1,0 +1,35 @@
+.GreenFont{
+	color: green;
+}
+
+/* table of contents*/
+div#toc{
+	background: #F5F5F5;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 0 0 2px #868686;
+}
+
+body{
+	background: #E9E9E9;
+}
+
+li.sidebar-brand > a{
+	display: inline;
+}
+
+footer{
+	background: #06122C;
+}
+.table>tbody>tr>td{
+	border-top: 1px solid #455168;
+}
+div.footer{
+	font-c;
+	color:#777;
+	font-size:13px;
+	border-right:1px solid #303A50;
+}

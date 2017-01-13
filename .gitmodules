@@ -1,0 +1,3 @@
+[submodule "lib/md-post-header-collapse"]
+	path = lib/md-post-header-collapse
+	url = https://github.com/szhielelp/md-post-header-collapse
