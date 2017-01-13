@@ -1,4 +1,4 @@
-var arrBreakId =  new Array("uyan_frame");
+var arrBreakId =  new Array("end");
 var arrCollapsableTag = new Array("H1","H2","H3");
 var arrExcludeTagPrefix = new Array("sidebar-toc-Ik4D-");
 // var excludeTagList = new Array(""); //TODO
