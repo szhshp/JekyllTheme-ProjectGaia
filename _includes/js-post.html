@@ -38,7 +38,13 @@
 		}
 	});
 
-	headerCollapsible()
+	/*header collapsible*/
+	$.headerCollapseRobot(
+	  arr_Id_CollapseEnds =  new Array("end"),                       
+	  arr_Collapsible_Tag = new Array("H1","H2","H3"),                       
+	  arr_ExcludeElemPrefix_InCollapsible  = new Array("comment-"),      
+	  arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
+	)
 
 	/*  toc list click effect */
 	$("a.content").click(function(){

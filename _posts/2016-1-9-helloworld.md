@@ -50,10 +50,16 @@ Auto-run when page loaded.
 
 Realized with this repo: [    szhielelp/md-post-header-collapse  ](https://github.com/szhielelp/md-post-header-collapse)
 
-Run **headerCollapsible()** after post loaded.
+Run **$.headerCollapseRobot()** after post loaded.
 
-<pre class="brush: html">
-    headerCollapsible();
+<pre class="brush: js">
+    /*header collapsible*/
+    $.headerCollapseRobot(
+      arr_Id_CollapseEnds =  new Array("end"),                       
+      arr_Collapsible_Tag = new Array("H1","H2","H3"),                       
+      arr_ExcludeElemPrefix_InCollapsible  = new Array("comment-"),      
+      arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
+    )
 </pre>
 
 You can try clicking on the icons near titles.
