@@ -14,6 +14,7 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: gainsboro;
 }
 
 .text-vertical-center {
@@ -264,6 +265,8 @@ li.headerlink .active {
 
 footer {
     padding: 20px 0;
+    background: #272751;
+    color: white;
 }
 
 span.headerbtn.glyphicon {
