@@ -55,3 +55,15 @@ Run **headerCollapsible()** after post loaded.
 
 You can try clicking on the icons near titles.
 
+### Stickie Post
+
+Just put a attribute in header of the specific post:
+
+    layout: post
+    title: lalalalala
+    category : Comic
+    tags : [Comic, 10101]
+    stickie: true
+
+Then current post will show ahead of other posts.
+

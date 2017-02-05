@@ -31,5 +31,3 @@ gems: [jekyll-paginate]
 markdown: kramdown
 # toc_levels: 1..2
 
-paginate: 8
-paginate_path: "page:num"

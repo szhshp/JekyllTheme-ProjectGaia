@@ -16,30 +16,31 @@
     <div class="row">
       <div class="col-md-7">
         <h2>Posts</h2>
-        {% for post in paginator.posts %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
+        <ul id="postlist">
 
-        <!-- For paginate -->
-        {% if paginator.total_pages >1 %}
-        <div>
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-            <!-- Selected Page -->
-            <span class="active" style="color:#337ab7">{{ page }}</span>
-            {% elsif page == 1 %}
-            <a style="color:grey" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-            {% else %}
-            <a style="color:grey" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-            {% endif %}
-          {% endfor %}
-          {% if paginator.next_page %}
-            <a style="color:grey" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">NextPg</a>
+         {% comment %} stickie post list {% endcomment %}
+          {% for post in site.posts %}
+          {% if post.stickie != true %}
+            {% continue %}
           {% endif %}
-        </div>
-        {% endif %}
+          <li>
+            <span class="label label-danger">{{ post.date | date: "%b %-d, %Y" }}</span> 
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>                
+          </li>
+          {% endfor %}
+
+          {% comment %} normal post list {% endcomment %}
+          {% for post in site.posts %}
+          {% if post.stickie == true %}
+            {% continue %}
+          {% endif %}
+          <li>
+            <span class="label label-primary">{{ post.date | date: "%b %-d, %Y" }}</span> 
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>                
+          </li>
+          {% endfor %}
+        </ul>
+
 
       </div>
       <div class="col-md-4">

@@ -3,6 +3,7 @@ layout: post
 title: Jekyll Theme - Project Gaia
 category : Intro
 tags : [intro, tag1, tag2]
+stickie: true
 ---
 
 ## Desc
@@ -63,3 +64,17 @@ Run **$.headerCollapseRobot()** after post loaded.
 </pre>
 
 You can try clicking on the icons near titles.
+
+### Stickie Post
+
+Just put a attribute in header of the specific post:
+
+ <pre class="brush: html; highlight: [5]">
+layout: post
+title: lalalalala
+category : Comic
+tags : [Comic, 10101]
+stickie: true
+</pre>
+
+Then current post will show ahead of other posts.

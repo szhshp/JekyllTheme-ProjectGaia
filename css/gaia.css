@@ -33,3 +33,7 @@ div.footer{
 	font-size:13px;
 	border-right:1px solid #303A50;
 }
+
+ul#postlist li{
+	line-height: 30px;
+}
