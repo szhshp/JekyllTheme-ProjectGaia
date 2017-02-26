@@ -2,7 +2,7 @@
     padding: 3px;
     font-weight: normal;
     display: inline;
-    font-size: 50%!important;
+    font-size: 80%!important;
 }
 body{
     font-family: "微软雅黑", Menlo!important;
@@ -40,6 +40,13 @@ pre{
     padding: 0.5rem;
     border-radius: 4px;
 }
-div#page-content-wrapper {
-    padding-bottom: 5rem;
+@media(max-width:480px) {
+    .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .row{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }
