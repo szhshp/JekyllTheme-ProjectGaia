@@ -21,7 +21,7 @@
               <div class="card-block">
                 {% for post in cat[1] %}
                 <div class="text-white"> {{ post.date | date: "%Y-%m-%d" }} 
-                <a class="text-white ml-3" href="{{ post.url }}">{{ post.title }}</a> 
+                <a class="text-white ml-3" href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> 
                 </div>
                 {% endfor %}
               </div>
@@ -51,7 +51,7 @@
               <div class="card-block">
                 {% for post in tag[1] %}
                 <div class="text-white"> {{ post.date | date: "%Y-%m-%d" }} 
-                <a class="text-white ml-3" href="{{ post.url }}">{{ post.title }}</a> </div>
+                <a class="text-white ml-3" href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> </div>
                 {% endfor %}
               </div>
             </div>

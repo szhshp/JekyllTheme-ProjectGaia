@@ -1,26 +1,26 @@
 <ul class="sidebar-nav">
     <li title="Home">
-        <a href="/index.html">
+        <a href="{{site.url}}{{site.baseurl}}/index.html">
             <i class="fa fa-home" aria-hidden="true"></i>
             Home  
         </a>
     </li>
     <li title="archives">
-        <a href="/index.html#archives">
+        <a href="{{site.url}}{{site.baseurl}}/index.html#archives">
             <i class="fa fa-file-archive-o" aria-hidden="true"></i>
             Archives  
             <span class="badge badge-primary">{{ site.posts.size}}</span>
         </a>
     </li>
     <li title="categories">
-        <a href="/categories.html">
+        <a href="{{site.url}}{{site.baseurl}}/categories.html">
             <i class="fa fa-tags" aria-hidden="true"></i>
             Categories 
             <span class="badge badge-primary">{{ site.categories.size}}</span>
         </a>
     </li>
     <li title="留言板">
-        <a href="/about.html" >
+        <a href="{{site.url}}{{site.baseurl}}/about.html" >
             <i class="fa fa-comments" aria-hidden="true"></i>
             Messager
         </a>
