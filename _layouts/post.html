@@ -1,61 +1,55 @@
-<!-- Post Layout Start -->
-
 <!DOCTYPE html>
-<meta charset="utf-8" />
-<html lang="{{ site.lang }}">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{site.title}}</title>
 
-  <body>
-    {% include js.html %}
-    {% include head.html %}
-    {% include navigation_sub.html %}
+    {% include global-css.html %}
 
-    <section class="container content-section" style="font-c">
-      <div class="row">
-      <div class="col-md-12" id="subcontainer">
-      <br>
-          <div class="col-md-8">
-            <h1><strong>{{ page.title }}</strong></h1>
-            {{ page.date | date_to_string }}<br>
-            <hr style="height:1px;border:none;border-top:1px solid #C9C9C9;" />
 
-            {{ page.content | markdownify }}
+    <!-- HighLighter -->
+    <link href="{{site.url}}{{site.baseurl}}/css/shCore.css" rel='stylesheet' type='text/css'/>
+    <link href="{{site.url}}{{site.baseurl}}/css/shCoreRDark.css" rel='stylesheet' type='text/css'/>
+    <link href="{{site.url}}{{site.baseurl}}/css/shThemeRDark.css" rel='stylesheet' type='text/css'/>
 
-              <!-- UY BEGIN -->
-              <div id="end"></div>
-              <div id="uyan_frame">
-              </div>
-              <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=xxxxx"></script>
-              <!-- UY END -->
-          </div>
+    <link href="{{site.url}}{{site.baseurl}}/css/post.css" rel='stylesheet' type="text/css"/>
+    <link href="{{site.url}}{{site.baseurl}}/css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
 
-          <div class="col-md-4" style="height:100px"></div>
-         
+</head>
+<body>
 
-          <div class="col-md-4">
+    <div id="wrapper" >
 
-            <h4>Categories:</h4>
-            {% for cat in page.categories %}
-            <a href="{{site.url}}{{site.baseurl}}/categories.html">{{ cat }}</a>
-            {% endfor %}<br>
-            <h4>Tags:</h4>
-            {% for tag in page.tags %}
-            <a href="{{site.url}}{{site.baseurl}}/categories.html">#{{ tag }}</a>
-            {% endfor %}
-          </div>
-          <div class="col-md-4">
-            <h4>Recent Posts</h4>
-             {% for post in site.posts limit:5 %}
-             <li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-             {% endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
-    {% include styles.html %}
-    {% include footer.html %}
-    {% include highlighter.html %}
-    {% include js-post.html %}
+       {% include navbar.html %}
+       {% include post.html %}
+       {% include comment-full.html %}
+	{% include footer.html %}
 
-  </body>
+    </div>
+
+    {% include global-js.html %}
+
+   <!-- Highlighter  -->
+   <script src="{{site.url}}{{site.baseurl}}/js/shCore.js" type='text/javascript'></script>
+   <!-- <script src="{{site.url}}{{site.baseurl}}/js/shBrushCSharp.js" type='text/javascript'></script> -->
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushColdFusion.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushCpp.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushCss.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushJava.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushPhp.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushRuby.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushSql.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushXml.js" type='text/javascript'></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/shBrushJScript.js" type='text/javascript'></script>
+
+   <!-- Header collapse -->
+   <script src="{{site.url}}{{site.baseurl}}/js/md-post-header-collapse.js" type="text/javascript"></script>
+
+   <script src="{{site.url}}{{site.baseurl}}/js/sidebar.js" type="text/javascript"></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/post.js" type="text/javascript"></script>
+
+
+</body>
 </html>
-<!-- Post Layout End -->
+

@@ -7,20 +7,20 @@
 
     {% include global-css.html %}
 
-    <link href="{{site.url}}{{site.baseurl}}/css/categories.css" rel='stylesheet' type='text/css'/>
+    <link href="{{site.url}}{{site.baseurl}}/css/head.css" rel='stylesheet' type="text/css"/>
+    <link href="{{site.url}}{{site.baseurl}}/css/archives.css" rel='stylesheet' type="text/css"/>
 
 </head>
 <body>
 
     <div id="wrapper" >
 
-         {% include navbar.html %}
-         {% include categories.html %}
-         {% include footer.html %}
+       {% include navbar.html %}
+       {% include head.html %}
+       {% include archives.html %}
+       {% include footer.html %}
 
     </div>
-
-
 
     {% include global-js.html %}
 

@@ -1,0 +1,30 @@
+ 
+<!-- Toggle Button -->
+ <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+     <i class="fa fa-bars" aria-hidden="true"></i>
+ </a>
+
+ <!-- Sidebar for desktop -->
+ <div id="sidebar-wrapper" class="hidden-xs-down">
+    <div class="text-warning text-sm-center h4">Sidebar</div>
+    <div class="tab-content" id=tab-content>
+        <div class="text-sm-center">
+            <img class="site-author-image m-2" itemprop="image" src=" http://comic.szhshp.org/comic/10101/headshot/0 (2).png">
+            <div class="text-warning">Szhshp</div>
+            {% include nav-links.html %}
+        </div>
+    </div>
+</div>
+
+<!-- Navbar for xsmall screen  -->
+<div class="hidden-sm-up">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{site.title}}</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            {% include nav-links.html %}
+        </div>
+    </nav>
+</div>

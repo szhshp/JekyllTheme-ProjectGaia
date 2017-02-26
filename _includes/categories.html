@@ -1,74 +1,64 @@
-<!-- For category collapse  -->
-<script src="{{site.url}}{{site.baseurl}}/js/sco.collapse.js"></script>
-<script src="{{site.url}}{{site.baseurl}}/js/sco.message.js"></script>
-<link rel="stylesheet" type="text/css" href="{{site.url}}{{site.baseurl}}/css/sco.message.css"/>
-
-<style>
-  #archives{
-    background: #D0DDC4;
-    padding: 50px 0;
-  }
-  .postlink_div{
-    height:30px;
-  }
-</style>
-
-<script>
-  $(document).ready(function(){
-    $.scojs_message('Click to show posts', $.scojs_message.TYPE_OK);
-  });
-</script>
-
-<section id="archives" class="archives">
-  <div class="container">
+<div id="page-content-wrapper">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
-        <h2>Categories</h2>
-        <br>
 
-        <ul class="nav nav-list">
+        <div class="page-header" id="categories">
+          <h3>Categories </h3>
+        </div>
+        <div id="categories" class="categories" role="tablist" aria-multiselectable="false">
           {% for cat in site.categories %}
-          <li>
-            <a name="{{cat[0]}}" href="#" data-trigger="collapse" data-parent=".nav" style="font-size:20px;" >{{ cat[0] }}</a>
-            <div class="collapsible" style="display: none;">
-               {% for post in cat[1] %}
-                <div class="postlink_div">
-
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <a href="{{site.url}}{{site.baseurl}}{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
-                   &nbsp;&nbsp;{{ post.date | date: "%Y-%m-%d" }}
-                 </div>
-               {% endfor %}
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="{{cat[0]}}header">
+              <h5 class="mb-0">
+                <a name="c_{{cat[0]}}" class="collapsed text-white" data-toggle="collapse" data-parent="#categories" href="#c_{{cat[0]}}" aria-expanded="false" aria-controls="c_{{cat[0]}}">{{ cat[0] }}
+                  <span class="badge badge-default ml-2 text-white">{{ cat[1].size }}</span>
+                </a>
+              </h5>
             </div>
-         </li>
+
+            <div id="c_{{cat[0]}}" class="collapse" role="tabpanel" aria-labelledby="{{cat[0]}}header">
+              <div class="card-block">
+                {% for post in cat[1] %}
+                <div class="text-white"> {{ post.date | date: "%Y-%m-%d" }} 
+                <a class="text-white ml-3" href="{{ post.url }}">{{ post.title }}</a> 
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
           {% endfor %}
-        </ul>
-        
-      </div> 
-       <div class="col-md-6">
-        <h2>Tags</h2>
-        <br>
+        </div>
 
 
-        <ul class="nav nav-list">
+      </div>
+      <div class="col-md-6">
+        <div class="page-header" id="tags">
+          <h3>Tags</h3>
+        </div>
+        <div id="tags" class="categories" role="tablist" aria-multiselectable="false">
           {% for tag in site.tags %}
-          <li>
-            <a name="{{ tag[0] }}" href="#" data-trigger="collapse" data-parent=".nav" style="font-size:20px;" >{{ tag[0] }}</a>
-            <div class="collapsible" style="display: none;">
-              {% for post in tag[1] %}
-                <div class="postlink_div">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <a href="{{site.url}}{{site.baseurl}}{{ post.url }}">&bull;&nbsp;{{ post.title }}</a>
-                 &nbsp;&nbsp;{{ post.date | date: "%Y-%m-%d" }}
-               </div>
-              {% endfor %}
+          <div class="card">
+            <div class="card-header border-0" role="tab" id="{{tag[0]}}header">
+              <h5 class="mb-0">
+                <a name="t_{{tag[0]}}" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_{{tag[0]}}" aria-expanded="false" aria-controls="t_{{tag[0]}}">{{ tag[0] }}
+                  <span class="badge badge-default ml-2 text-white">{{ tag[1].size }}</span>
+                </a>
+              </h5>
             </div>
-          </li>
+
+            <div id="t_{{tag[0]}}" class="collapse" role="tabpanel" aria-labelledby="{{tag[0]}}header">
+              <div class="card-block">
+                {% for post in tag[1] %}
+                <div class="text-white"> {{ post.date | date: "%Y-%m-%d" }} 
+                <a class="text-white ml-3" href="{{ post.url }}">{{ post.title }}</a> </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
           {% endfor %}
-        </ul>
-      </div> 
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<br><br><br><br><br><br>
-</section>

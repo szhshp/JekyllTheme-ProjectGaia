@@ -1,72 +1,53 @@
-<style>
-  .post-link{
-    font-weight: 600
-  }
-  .post-meta{
-    font-weight: 500;
-    font-size: 16px
-  }
-  #archives{
-    padding: 50px 0
-  }
-</style>
+  <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header" id="archives">
+                            <h3>Archives</h3>
+                        </div>
 
-<section id="archives" class="archives">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <h2>Posts</h2>
-        <ul id="postlist">
-
-         {% comment %} stickie post list {% endcomment %}
-          {% for post in site.posts %}
-          {% if post.stickie != true %}
-            {% continue %}
-          {% endif %}
-          <li>
-            <span class="label label-danger">{{ post.date | date: "%b %-d, %Y" }}</span> 
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>                
-          </li>
-          {% endfor %}
-
-          {% comment %} normal post list {% endcomment %}
-          {% for post in site.posts %}
-          {% if post.stickie == true %}
-            {% continue %}
-          {% endif %}
-          <li>
-            <span class="label label-primary">{{ post.date | date: "%b %-d, %Y" }}</span> 
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>                
-          </li>
-          {% endfor %}
-        </ul>
+                        <ul class="ant-timeline" id="archivelist">
 
 
-      </div>
-      <div class="col-md-4">
+                            {% comment %} Stickie list {% endcomment %}
+                            {% for post in site.posts %}
+
+                            {% if post.stickie != true %}
+                            {% continue %}
+                            {% endif %}
 
 
-        <h2>Categories</h2>
-        <div id="tag-list">
-          {% for cat in site.categories %}
-          <a href="/categories.html" title="{{ cat[0] }}">
-           {{ cat[0] }}<sup>{{ cat[1].size }}</sup>&nbsp;
-         </a>
-          {% endfor %}
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="text-danger">{{ post.date | date: "%Y-%m-%d" }} </span>
+                                    <div class="d-flex align-items-center post-title">
+                                     <a class="post-link text-danger h6 text-danger" href="{{ post.url}}">{{ post.title }}</a>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+
+
+                            {% comment %} Normal post list {% endcomment %}
+                            {% for post in site.posts %}
+
+                            {% comment %} If it already showed in stickie list {% endcomment %}
+                            {% if post.stickie == true %}
+                            {% continue %}
+                            {% endif %}
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
+                                    <div class="d-flex align-items-center post-title">
+                                        <a class="post-link h6 text-primary" href="{{ post.url}}">{{ post.title }}</a>
+                                     </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+            </div>
         </div>
-
-        <h2 id="tags">Tags</h2>
-
-        <div id="tag_sidebar">
-          {% for tag in site.tags %}
-          <a href="/categories.html" title="{{ tag[0] }}">
-            #{{ tag[0] }}<sup>{{ tag[1].size }}</sup>&nbsp;
-          </a>
-          {% endfor %}
-        </div>
-
-    </div>
-  </div>
-</div>
-<br><br><br><br><br><br>
-</section>
+        <!-- /#page-content-wrapper -->

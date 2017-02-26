@@ -5,6 +5,9 @@ category : Intro
 tags : [intro, tag1, tag2]
 stickie: true
 ---
+## Updated 2017-Feb
+
+Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 ## Desc
 
@@ -71,7 +74,7 @@ Just put a attribute in header of the specific post:
 
  <pre class="brush: html; highlight: [5]">
 layout: post
-title: lalalalala
+title: blablablalala
 category : Comic
 tags : [Comic, 10101]
 stickie: true
