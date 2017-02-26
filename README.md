@@ -1,5 +1,10 @@
 # Project Gaia
 
+
+## 2017-Feb Bootstrap 4 First Touch
+
+Build with **Bootstrap 4, JQuery 3**
+
 ## Desc
 
 This is a personal Jekyll blog theme.
