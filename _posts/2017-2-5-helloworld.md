@@ -55,7 +55,7 @@ Here is code snippet example:
 
 Realized with this repo: [    jgallen23/toc  ](https://github.com/jgallen23/toc)
 
-![](   /demo/X1.png   )
+![](   /demo/X2.png   )
 
 Auto-run when page loaded.
 
@@ -66,7 +66,7 @@ Realized with this repo: [    szhielelp/md-post-header-collapse  ](https://githu
 Run **$.headerCollapseRobot()** after post loaded.
 
 <pre class="brush: js">
-    /*header collapsible*/
+    /*header collapsible example*/
     $.headerCollapseRobot(
       arr_Id_CollapseEnds =  new Array("end"),                       
       arr_Collapsible_Tag = new Array("H1","H2","H3"),                       
@@ -75,7 +75,7 @@ Run **$.headerCollapseRobot()** after post loaded.
     )
 </pre>
 
-![](   /demo/X2.png   )
+![](   /demo/X1.png   )
 
 You can try clicking on the icons near titles.
 

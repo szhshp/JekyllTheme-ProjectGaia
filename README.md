@@ -15,10 +15,10 @@ This is a personal Jekyll blog theme.
 
 The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
 
-![](    https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/1.jpg  )
-![](    https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/2.jpg  )
-![](    https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/3.jpg  )
-![](    https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/4.jpg  )
+![](    demo/1.jpg  )
+![](    demo/2.jpg  )
+![](    demo/3.jpg  )
+![](    demo/4.jpg  )
 
 
 ## Demo
@@ -43,21 +43,13 @@ Usage(include necessary CSS and JS and run **SyntaxHighlighter.all()**):
 
 Here is code snippet example:
 
-<pre class="brush: html">
-    [please check the post markdown here]
-    <ul>
-      <li class="headerlink">
-        <a class="content active">List</a>
-        <a class="link inactived">Link</a>
-      </li>
-    </ul>
-</pre>
+![](    demo/X3.png )
 
 ### Table of Content
 
 Realized with this repo: [    jgallen23/toc  ](https://github.com/jgallen23/toc)
 
-![](   demo/X1.png   )
+![](   demo/X2.png   )
 
 Auto-run when page loaded.
 
@@ -77,7 +69,7 @@ Run **$.headerCollapseRobot()** after post loaded.
     )
 </pre>
 
-![](   demo/X2.png   )
+![](   demo/X1.png   )
 
 You can try clicking on the icons near titles.
 
