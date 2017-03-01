@@ -1,9 +1,13 @@
 # Project Gaia
 
 
-## 2017-Feb Bootstrap 4 First Touch
+## Updated History
 
-Build with **Bootstrap 4, JQuery 3**
+- Mar 1st, 2017
+Change another toc plugin
+
+- Feb 28th, 2017
+Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 ## Desc
 
@@ -33,20 +37,27 @@ Realized with this repo: [    syntaxhighlighter/syntaxhighlighter](https://githu
 
 Usage(include necessary CSS and JS and run **SyntaxHighlighter.all()**):
 
+<pre class="brush: html">
       SyntaxHighlighter.all();
+</pre>
 
 Here is code snippet example:
 
+<pre class="brush: html">
+    [please check the post markdown here]
     <ul>
       <li class="headerlink">
         <a class="content active">List</a>
         <a class="link inactived">Link</a>
       </li>
     </ul>
+</pre>
 
-### awesome-toc
+### Table of Content
 
-Realized with this repo: [     letiantian/awesome-toc  ](https://github.com/letiantian/awesome-toc)
+Realized with this repo: [    jgallen23/toc  ](https://github.com/jgallen23/toc)
+
+![](   demo/X1.png   )
 
 Auto-run when page loaded.
 
@@ -54,9 +65,19 @@ Auto-run when page loaded.
 
 Realized with this repo: [    szhielelp/md-post-header-collapse  ](https://github.com/szhielelp/md-post-header-collapse)
 
-Run **headerCollapsible()** after post loaded.
+Run **$.headerCollapseRobot()** after post loaded.
 
-    headerCollapsible();
+<pre class="brush: js">
+    /*header collapsible*/
+    $.headerCollapseRobot(
+      arr_Id_CollapseEnds =  new Array("end"),                       
+      arr_Collapsible_Tag = new Array("H1","H2","H3"),                       
+      arr_ExcludeElemPrefix_InCollapsible  = new Array("comment-"),      
+      arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
+    )
+</pre>
+
+![](   demo/X2.png   )
 
 You can try clicking on the icons near titles.
 
@@ -64,11 +85,12 @@ You can try clicking on the icons near titles.
 
 Just put a attribute in header of the specific post:
 
-    layout: post
-    title: lalalalala
-    category : Comic
-    tags : [Comic, 10101]
-    stickie: true
+ <pre class="brush: html; highlight: [5]">
+layout: post
+title: blablablalala
+category : Comic
+tags : [Comic, 10101]
+stickie: true
+</pre>
 
 Then current post will show ahead of other posts.
-
