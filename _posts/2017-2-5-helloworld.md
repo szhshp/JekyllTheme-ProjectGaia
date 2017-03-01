@@ -5,8 +5,12 @@ category : Intro
 tags : [intro, tag1, tag2]
 stickie: true
 ---
-## Updated 2017-Feb
+## Updated History
 
+- Mar 1st, 2017
+Change another toc plugin
+
+- Feb 28th, 2017
 Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 ## Desc
@@ -20,6 +24,8 @@ repo link: [szhielelp/JekyllTheme-ProjectGaia](https://github.com/szhielelp/Jeky
 ## Post Example
 
 Here is a post example
+
+[Please check the code in Markdown]
 
 ## Plugins
 
@@ -36,6 +42,7 @@ Usage(include necessary CSS and JS and run **SyntaxHighlighter.all()**):
 Here is code snippet example:
 
 <pre class="brush: html">
+    [please check the post markdown here]
     <ul>
       <li class="headerlink">
         <a class="content active">List</a>
@@ -44,9 +51,11 @@ Here is code snippet example:
     </ul>
 </pre>
 
-### awesome-toc
+### Table of Content
 
-Realized with this repo: [     letiantian/awesome-toc  ](https://github.com/letiantian/awesome-toc)
+Realized with this repo: [    jgallen23/toc  ](https://github.com/jgallen23/toc)
+
+![](   /demo/X1.png   )
 
 Auto-run when page loaded.
 
@@ -65,6 +74,8 @@ Run **$.headerCollapseRobot()** after post loaded.
       arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
     )
 </pre>
+
+![](   /demo/X2.png   )
 
 You can try clicking on the icons near titles.
 

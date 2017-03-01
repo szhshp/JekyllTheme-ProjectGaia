@@ -46,11 +46,9 @@
 
 #page-content-wrapper {
     width: 100%;
-    position: absolute;
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
     margin-right: -250px;
 }
 

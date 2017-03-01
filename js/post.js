@@ -26,6 +26,22 @@
         )
   });
 
+  function toc(tocDivID){
+    var headerIndex = new Array(0,0,0); 
+    $('#'+tocDivID).toc({
+          'selectors': 'h1,h2,h3', //elements to use as headings
+          'prefix': 'toc', //prefix for anchor tags and class names
+          'headerText': function(i, heading, $heading) { //custom function building the header-item text
+            if ($heading.is("h2")) {
+                return (++headerIndex[0])+'. '+$heading.text();
+            }
+            else if ($heading.is("h3")) return (headerIndex[0].toString())+'.'+(++headerIndex[1])+'. '+$heading.text();
+            // else if ($heading.is("h4")) return (headerIndex[0].toString())+'.'+(headerIndex[1])+'.' + (headerIndex[2])+'. '+$heading.text();
+            return  $heading.text();
+          }
+      });
+  }
+
 
   $(document).ready(function(){
       $('#toc').toggleClass('hidden-xl-down');
@@ -33,5 +49,7 @@
           e.preventDefault()
           $(this).tab('show')
       })
+      toc('sidebar-toc-content');
+      $('#toc').trigger('click');
   });
 } ());
