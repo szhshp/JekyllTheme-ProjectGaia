@@ -19,8 +19,12 @@ body{
     color: #9E9E9E;
     display: inline;
 }
-h1,h2,h3{
+h3{
     color:#0275d8;
+}
+h2 {
+    padding-top: 50px;
+    color: orange;
 }
 blockquote {
     border-left: 5px solid #bdbdbd;
@@ -43,7 +47,7 @@ pre{
 @media(max-width:480px) {
     .container-fluid {
         padding-right: 0px;
-        padding-left: 0px;
+        padding-left: 5px;
     }
     .row{
         margin-right: 0px;
