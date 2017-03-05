@@ -7,6 +7,9 @@ stickie: true
 ---
 ## Updated History
 
+- Mar 5th, 2017
+Style updated
+
 - Mar 1st, 2017
 Change another toc plugin
 

@@ -26,17 +26,31 @@
         )
   });
 
+  function headerNumber(postContentDivID) {
+    var headerIndex = [0,0];  /*for h2,h3*/
+    $('#'+postContentDivID).find('h2:not(blockquote h2),h3:not(blockquote h3)').each(function(index, el) {
+
+      if ($(el).is('H2')) {
+        $(el).text( (++headerIndex[0])+'. '+$(el).text());
+        headerIndex[1]=0;
+      }else if ($(el).is('H3')) {
+        $(el).text( headerIndex[0]+'.'+ (++headerIndex[1])+'. '+$(el).text());
+      }
+    });
+  }
+
   function toc(tocDivID){
     var headerIndex = new Array(0,0,0); 
     $('#'+tocDivID).toc({
-          'selectors': 'h1,h2,h3', //elements to use as headings
+          'selectors': 'h1:not(blockquote h1),h2:not(blockquote h2),h3:not(blockquote h3)', //elements to use as headings
           'prefix': 'toc', //prefix for anchor tags and class names
           'headerText': function(i, heading, $heading) { //custom function building the header-item text
-            if ($heading.is("h2")) {
-                return (++headerIndex[0])+'. '+$heading.text();
+            if ($heading.is("h2")){
+              headerIndex[1]=0;
+              return (++headerIndex[0])+'. '+$heading.text();          
+            }else if ($heading.is("h3")) {
+              return (headerIndex[0])+'.'+(++headerIndex[1])+'. '+$heading.text();
             }
-            else if ($heading.is("h3")) return (headerIndex[0].toString())+'.'+(++headerIndex[1])+'. '+$heading.text();
-            // else if ($heading.is("h4")) return (headerIndex[0].toString())+'.'+(headerIndex[1])+'.' + (headerIndex[2])+'. '+$heading.text();
             return  $heading.text();
           }
       });
@@ -50,6 +64,7 @@
           $(this).tab('show')
       })
       toc('sidebar-toc-content');
+      headerNumber('post-content');
       $('#toc').trigger('click');
   });
 } ());

@@ -5,7 +5,7 @@
     font-size: 80%!important;
 }
 body{
-    font-family: "微软雅黑", Menlo!important;
+    font-family: "Microsoft Yahei", Menlo!important;
     background: url(http://7sbmib.com1.z0.glb.clouddn.com/body_background1.png)
 }
 .page-header{
@@ -23,8 +23,8 @@ h3{
     color:#0275d8;
 }
 h2 {
-    padding-top: 50px;
-    color: orange;
+    padding-top: 20px;
+    color: orangered;
 }
 blockquote {
     border-left: 5px solid #bdbdbd;
