@@ -4,16 +4,12 @@
 ## Updated History
 
 - Mar 1st, 2017
-Change another toc plugin
+TOC plugin updated
 
 - Feb 28th, 2017
-Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
+Include **Bootstrap 4-Alpha** and **JQuery 3**
 
 ## Desc
-
-This is a personal Jekyll blog theme.
-
-The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
 
 ![](    demo/1.jpg  )
 ![](    demo/2.jpg  )
