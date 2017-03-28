@@ -58,7 +58,7 @@ Here is code snippet example:
 
 Realized with this repo: [    jgallen23/toc  ](https://github.com/jgallen23/toc)
 
-![](   /demo/X2.png   )
+![](   https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/X2.png   )
 
 Auto-run when page loaded.
 
@@ -78,7 +78,7 @@ Run **$.headerCollapseRobot()** after post loaded.
     )
 </pre>
 
-![](   /demo/X1.png   )
+![](   https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/X1.png   )
 
 You can try clicking on the icons near titles.
 
