@@ -11,10 +11,10 @@ stickie: true
 Added new font
 
 - Mar 5th, 2017
-Style updated
+Updated style
 
 - Mar 1st, 2017
-Change another toc plugin
+Updated TOC plugin
 
 - Feb 28th, 2017
 Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
