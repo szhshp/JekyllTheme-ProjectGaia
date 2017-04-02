@@ -3,11 +3,18 @@
 
 ## Updated History
 
+- April 3nd, 2017
+Added new font
+>It's really cool!
+
+- Mar 5th, 2017
+Style updated
+
 - Mar 1st, 2017
 TOC plugin updated
 
 - Feb 28th, 2017
-Include **Bootstrap 4-Alpha** and **JQuery 3**
+Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 ## Desc
 
