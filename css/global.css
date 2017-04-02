@@ -1,12 +1,26 @@
+/* latin */
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(../fonts/TitilliumWeb-Regular.ttf)  format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 .badge {
     padding: 3px;
     font-weight: normal;
     display: inline;
     font-size: 80%!important;
 }
+code{
+    margin: .3rem;
+    color: #f5fafe;
+    background-color: #999;
+}
 body{
-    font-family: "Microsoft Yahei", Menlo!important;
-    background: url(../img/body_background1.png);
+    background: url(http://7sbmib.com1.z0.glb.clouddn.com/body_background1.png);
+    font-size: 1.0rem;
+    font-family: 'Titillium Web', sans-serif;
 }
 .page-header{
     padding-bottom: 9px;
@@ -20,11 +34,7 @@ body{
     display: inline;
 }
 h3{
-    color:#0275d8;
-}
-h2 {
-    padding-top: 20px;
-    color: orangered;
+    font-size: 1.5rem;
 }
 blockquote {
     border-left: 5px solid #bdbdbd;

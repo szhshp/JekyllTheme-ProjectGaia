@@ -7,6 +7,9 @@ stickie: true
 ---
 ## Updated History
 
+- April 3nd, 2017
+Added new font
+
 - Mar 5th, 2017
 Style updated
 
