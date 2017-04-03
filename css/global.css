@@ -20,7 +20,7 @@ code{
 body{
     background: url(http://7sbmib.com1.z0.glb.clouddn.com/body_background1.png);
     font-size: 1.0rem;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif!important;
 }
 .page-header{
     padding-bottom: 9px;
