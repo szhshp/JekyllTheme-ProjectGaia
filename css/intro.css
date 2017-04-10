@@ -1,20 +1,12 @@
 h1.about_topic{
-  left: 2%;
-  top: 5%;
   color: white!important;
-  position: absolute;
   border-bottom: 2px solid white;
-  width: 100%;
-  font-weight: 900;
-  padding: 5px;
+  padding: 10px;
   display: none;
 }
 
-div.about_loadingicon{
-    left: 5%;
-    top: 12%;
-    position: absolute;
-    margin:  0px;
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
+    z-index: 1000;
 }
 
 div.section:not(.aboutme){
@@ -27,12 +19,7 @@ div.section:not(.aboutme) a{
 }
 
 ul.about_content{
-    position: absolute;
-    left: 10%;
-    top: 20%;
     font-size: 20px;
-    line-height: 30px;
-    margin: 0px;
     display: none;
 }
 
@@ -48,10 +35,6 @@ a#sendmsg{
     border-color: white;
     margin-top: 20px;
     color: black;
-}
-
-div#fullpage {
-    font-family: 'Superhelioregul5cd99a8ca165b7','Microsoft Yahei';
 }
 
 /**
@@ -105,7 +88,7 @@ html.fp-enabled,
 }
 .fp-tableCell {
     display: table-cell;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     width: 100%;
     height: 100%;
 }
