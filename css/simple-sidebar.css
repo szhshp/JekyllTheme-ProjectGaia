@@ -42,6 +42,7 @@
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
     margin-right: 0px;
+    opacity: 1;
 }
 
 #page-content-wrapper {
@@ -61,7 +62,6 @@
     font-size: 18px;
     padding: 0;
     list-style: none;
-    font-family: 'Superhelioregul5cd99a8ca165b7';
 }
 
 .sidebar-nav li {
@@ -117,7 +117,8 @@
 
     #sidebar-wrapper {
         width: 250px;
-        margin-right: -250px;
+        margin-right: -50px;
+        opacity: 0;
     }
 
     img.site-author-image {
