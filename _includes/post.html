@@ -11,8 +11,11 @@
                 </div>
                 {{ page.content | markdownify }}
 
-                <!-- don't delete this div as this is header collapse end identified  -->
-                <div id="content-end"><h1>Comment Box</h1></div>
+                <!-- don't delete this div, this is marked as the end position of collapse plugin  -->
+                <div id="content-end"></div>
+                <div class="page-header">
+                   <span>Comment Box</span>
+               </div>
                 <div>(update the code to your comment plugin in comment-full.html)</div>
             </div>
 
