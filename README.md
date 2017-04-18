@@ -89,3 +89,10 @@ stickie: true
 </pre>
 
 Then current post will show ahead of other posts.
+
+
+## Extra 
+
+I would be happy if you wanna exchange the blog link with me.
+
+Just feel free to leave a msg with ur link in comments box from   [     http://szhshp.org  ](http://szhshp.org) or [   https://szhielelp.github.io/JekyllTheme-ProjectGaia/    ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)

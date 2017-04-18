@@ -25,10 +25,11 @@
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    margin-right: -250px;
+    margin-right: -50px;
+    opacity: 0;
     right: 0px;
     height: 100%;
-    overflow-y: auto;
+    overflow-x: hidden;
     background: rgba(0, 0, 0, 0.92);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -66,7 +67,7 @@
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 30px;
 }
 
 .sidebar-nav li a {
