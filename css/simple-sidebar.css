@@ -44,6 +44,7 @@
     width: 250px;
     margin-right: 0px;
     opacity: 1;
+    visibility: visible;
 }
 
 #page-content-wrapper {
@@ -120,6 +121,7 @@
         width: 250px;
         margin-right: -50px;
         opacity: 0;
+        visibility: hidden;
     }
 
     img.site-author-image {
