@@ -7,6 +7,9 @@ stickie: true
 ---
 ## Updated History
 
+- May 6th, 2017
+Added global font style
+
 - April 3nd, 2017
 Added new font
 

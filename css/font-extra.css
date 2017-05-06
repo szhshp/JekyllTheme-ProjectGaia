@@ -1,0 +1,199 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+/*!
+ * custom.css
+ * https://keter.me/go?page=custom.css
+ *
+ * Adobe/Apple version 
+ * + Source Sans, Source Serif, Source Code, Source Han Sans
+ * + HanHei, PingFang
+ *
+ * Copyright 2016 Francis Zhao <francis@keter.me>
+ * Released under the MIT license
+ * https://keter.me/licenses/MIT
+ *
+ * Date: 2016-06-27T22:00+08:00
+ */
+
+
+html,
+[lang=zh-CN] { font-family: "Source Han Sans SC", "Source Han Sans", "HanHei SC", "Source Sans Pro", "Microsoft YaHei", sans-serif; }
+[lang=zh-TW] { font-family: "Source Han Sans TC", "Source Han Sans", "HanHei TC", "Source Sans Pro", "Microsoft JhengHei", sans-serif; }
+[lang=zh-HK] { font-family: "Source Han Sans TC", "Source Han Sans", "HanHei TC", "Source Sans Pro", "Microsoft JhengHei", sans-serif; }
+[lang=ja-JP] { font-family: "Source Han Sans", "Source Sans Pro", sans-serif; }
+[lang=ko-KR] { font-family: "Source Han Sans K", "Source Sans Pro", sans-serif; }
+
+body, input, textarea, keygen, select, button {
+  font-family: inherit;
+  font-synthesis: none;
+  font-feature-settings: "liga", "kern";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+      text-shadow:0.03em 0.03em 0.03em #000 !important
+}
+
+
+/*
+ * FONTS
+ */
+
+/* Global fonts substitution */
+
+/* 中文 (简体) */
+
+@font-face {
+  font-family: "SimSun";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "宋体";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "NSimSun";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "新宋体";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "SimHei";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "黑体";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Microsoft YaHei";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "微软雅黑";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Microsoft YaHei UI";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "STHeiti SC";
+  src: local("PingFang SC");
+}
+
+/* 中文 (繁體) */
+
+@font-face {
+  font-family: "MingLiU";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "MingLiU-ExtB";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "MingLiU_HKSCS";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "MingLiU_HKSCS-ExtB";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "PMingLiU";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "PMingLiU-ExtB";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "Microsoft JhengHei";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "微軟正黑體";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "Microsoft JhengHei UI";
+  src: local("Source Han Sans TC");
+}
+
+@font-face {
+  font-family: "STHeiti TC";
+  src: local("PingFang TC");
+}
+
+/* Latin */
+
+@font-face {
+  font-family: "Arial";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Verdana";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Source Han Sans SC");
+}
+
+@font-face {
+  font-family: "Courier";
+  src: local("Source Code Pro");
+}
+
+@font-face {
+  font-family: "Courier New";
+  src: local("Source Code Pro");
+}
+
+
+/*
+ * ADS HIDDEN
+ */
+
+.adsbygoogle {
+  display: none !important;
+}
+
+
+/*
+ * SPECIFIC SITES
+ */
+
+/* i really want this to be global */
+
+/* 网站全局字体 */

@@ -3,9 +3,12 @@
 
 ## Updated History
 
+- May 6th, 2017
+Added global font style
+>Texts are more clear now!
+
 - April 3nd, 2017
 Added new font
->It's really cool!
 
 - Mar 5th, 2017
 Style updated
