@@ -4,6 +4,7 @@
 ## Updated History
 
 - May 6th, 2017
+Updated font page
 Added global font style
 >Texts are more clear now!
 
