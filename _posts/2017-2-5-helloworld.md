@@ -7,6 +7,9 @@ stickie: true
 ---
 ## Updated History
 
+- May 30th, 2017
+Added a reading progressbar for post page.
+
 - May 6th, 2017
 Updated font page
 Added global font style
@@ -27,7 +30,7 @@ Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 This is a personal blog source code.
 
-The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o 
+The theme name is 'Project Gaia', cuz I have another under building project named 'Project Uranus' o(*￣▽￣*)o
 
 repo link: [szhielelp/JekyllTheme-ProjectGaia](https://github.com/szhielelp/JekyllTheme-ProjectGaia)
 
@@ -101,4 +104,13 @@ tags : [Comic, 10101]
 stickie: true
 </pre>
 
+
 Then current post will show ahead of other posts.
+
+### Reading Progressbar
+
+Inspired from [http://es6.ruanyifeng.com/#docs/promise](http://es6.ruanyifeng.com/#docs/promise)
+
+![](   https://szhielelp.github.io/JekyllTheme-ProjectGaia/demo/X4.png   )
+
+It will show your reading progress for current post.

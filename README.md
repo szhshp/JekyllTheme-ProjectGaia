@@ -34,7 +34,7 @@ See demo page here: [    Demo Page   ](https://szhielelp.github.io/JekyllTheme-P
 
 See extended blog here: [    Blog Page   ](http://szhshp.org/)
 
-See chinese guide post here: [   中文指导    ](http://szhshp.org/tech/2017/01/09/projectgaia.html)
+See chinese guide post here: [   中文指导    ](http://szhshp.org?pagename=/tech/2017/01/09/projectgaia.html)
 
 ## Plugins
 
@@ -95,8 +95,8 @@ stickie: true
 Then current post will show ahead of other posts.
 
 
-## Extra 
+## Extra
 
 I would be happy if you wanna exchange the blog link with me.
 
-Just feel free to leave a msg with ur link in comments box from   [     http://szhshp.org  ](http://szhshp.org) or [   https://szhielelp.github.io/JekyllTheme-ProjectGaia/    ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
+Feel free to leave a msg with ur link in comment box at  [     http://szhshp.org  ](http://szhshp.org) or [   https://szhielelp.github.io/JekyllTheme-ProjectGaia/    ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
