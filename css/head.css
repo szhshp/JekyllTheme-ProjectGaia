@@ -1,6 +1,8 @@
 #jumbotron{
+    background: url(/img/bg.jpg) no-repeat center center scroll;
     height: 100vh;
     padding-top: 25vh;
     background-size: 100% 100%;
+    font-size: 1.2rem
 }
 
