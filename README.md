@@ -4,31 +4,24 @@
 ## Updated History
 
 - May 30th, 2017
-	
-    Added a reading progressbar for post page.
-	
+Added a reading progressbar for post page.
+
 - May 6th, 2017
-	
-    Updated font page
-    
-    Added global font style
+Updated font page
+Added global font style
 
 - April 3nd, 2017
-	
-	Added new font
-	
+Added new font
+
 - Mar 5th, 2017
-	
-	Style updated
-	
+Style updated
+
 - Mar 1st, 2017
-	
-	TOC plugin updated
-	
+TOC plugin updated
+
 - Feb 28th, 2017
-	
-	Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
-	
+Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
+
 ## Desc
 
 ![](    demo/1.jpg  )
@@ -40,8 +33,7 @@
 ## Usage
 
 1. **Important** Please change the `baseurl` value in  `_config.yml` to your repo name
-
-1. **Optional** If you want to use relative path instead of absolute path, delete all `{{site.url}}{{site.baseurl}}` in all files
+1. **Optional** If you want to use relative path instead of absolute path, delete all `{{site.url}}{{site.baseurl}}` in all layout files
 
 ## Demo
 
