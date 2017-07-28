@@ -4,6 +4,7 @@
 ## Updated History
 
 - May 30th, 2017
+
 Added a reading progressbar for post page.
 
 - May 6th, 2017
@@ -34,6 +35,7 @@ Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 1. **Important** Please change the `baseurl` value in  `_config.yml` to your repo name
 
+1. **Optional** If you want to use relative path instead of absolute path, delete all `{{site.url}}{{site.baseurl}}` in all files
 
 ## Demo
 
