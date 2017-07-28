@@ -30,6 +30,11 @@ Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 ![](    demo/4.jpg  )
 
 
+## Usage
+
+1. **Important** Please change the `baseurl` value in  `_config.yml` to your repo name
+
+
 ## Demo
 
 See demo page here: [    Demo Page   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
