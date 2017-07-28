@@ -105,8 +105,6 @@ Inspired from [http://es6.ruanyifeng.com/#docs/promise](http://es6.ruanyifeng.co
 It will show your reading progress for current post.
 
 
-## 
-
 ## Extra
 
 I would be happy if you wanna exchange the blog link with me.
