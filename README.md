@@ -13,16 +13,16 @@
     Added global font style
 
 - April 3nd, 2017
-Added new font
+	Added new font
 
 - Mar 5th, 2017
-Style updated
+	Style updated
 
 - Mar 1st, 2017
-TOC plugin updated
+	TOC plugin updated
 
 - Feb 28th, 2017
-Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
+	Rebuild to include **Bootstrap 4-Alpha** and **JQuery 3**
 
 ## Desc
 
