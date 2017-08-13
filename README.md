@@ -1,7 +1,7 @@
 # Project Gaia
 
 
-## Updated History
+## Update History
 
 - May 30th, 2017
 Added a reading progressbar for post page.

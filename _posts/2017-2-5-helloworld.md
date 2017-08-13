@@ -5,7 +5,7 @@ category : Intro
 tags : [intro, tag1, tag2]
 stickie: true
 ---
-## Updated History
+## Update History
 
 - May 30th, 2017
 Added a reading progressbar for post page.
