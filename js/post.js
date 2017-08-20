@@ -5,7 +5,7 @@
     syntaxHighlighter: true,
     toc: true,
     headerNumber: true,
-    readingProgressBar: false
+    readingProgressBar: true
   }
 
   /*HighLighter: we can't put these in onReady */
