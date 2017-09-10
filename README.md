@@ -6,6 +6,9 @@
 
 ## Change Log
 
+- **Aug 20th, 2017**
+Added post plugin configuration
+
 - **May 30th, 2017**
 Added a reading progressbar for post page.
 

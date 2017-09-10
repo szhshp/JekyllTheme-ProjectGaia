@@ -1,5 +1,13 @@
 (function () {
 
+  var config = {
+    headerCollapsibleActive: true,
+    syntaxHighlighter: true,
+    toc: true,
+    headerNumber: true,
+    readingProgressBar: true
+  }
+
   /*HighLighter: we can't put these in onReady */
   var count = SyntaxHighlighter.findElements().length,
   now = 0;
@@ -15,18 +23,32 @@
           }, 200);
       })();
   };
-  SyntaxHighlighter.all();
+
+  if (config.syntaxHighlighter) {
+    SyntaxHighlighter.all();
+  }
+
   /* Highlighter callback: run headerCollapsible()*/
-  SyntaxHighlighter.complete(function(){
+    SyntaxHighlighter.complete(function(){
+     headerCollapsible();
+    });
+
+  function headerCollapsible(){
+
+    if (!config.headerCollapsibleActive) return;
+
     $.headerCollapseRobot(
-        arr_Id_CollapseEnds =  new Array("content-end"),
-        arr_Collapsible_Tag = new Array("H1","H2","H3"),
-        arr_ExcludeElemPrefix_InCollapsible  = new Array("comment-"),
-        arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
-        )
-  });
+      arr_Id_CollapseEnds =  new Array("content-end"),
+      arr_Collapsible_Tag = new Array("H1","H2","H3"),
+      arr_ExcludeElemPrefix_InCollapsible  = new Array("comment-"),
+      arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
+      )
+  }
 
   function headerNumber(postContentDivID) {
+
+    if (!config.headerNumber) return;
+
     var headerIndex = [0,0];  /*for h2,h3*/
     $('#'+postContentDivID).find('h2:not(blockquote h2),h3:not(blockquote h3)').each(function(index, el) {
 
@@ -40,6 +62,9 @@
   }
 
   function toc(tocDivID){
+
+    if (!config.toc) return;
+
     var headerIndex = new Array(0,0,0);
     $('#'+tocDivID).toc({
           'selectors': 'h1:not(blockquote h1),h2:not(blockquote h2),h3:not(blockquote h3)', //elements to use as headings
@@ -57,6 +82,12 @@
   }
 
   function initReadingProgressBar() {
+
+    if (!config.readingProgressBar) {
+       $('div#reading-progress').hide();
+       return;
+    }
+
   $(window).bind('scroll', function() {
     var percent = $(window).scrollTop()/($('body').height()-$(window).height())
     $('div#reading-progress').find('.progress-bar').css('width',percent*100+'%')

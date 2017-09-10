@@ -5,7 +5,15 @@ category : Intro
 tags : [intro, tag1, tag2]
 stickie: true
 ---
+
+## Desc
+
+>This post is only for demo, some contents may be archived. 
+> 
+> Please check document for newest details:  [ Document](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs/#/ )
+ 
 ## Update History
+
 
 - May 30th, 2017
 Added a reading progressbar for post page.
