@@ -1,8 +1,8 @@
 (function () {
     $("a#menu-toggle").on('click', sidebarToggle);
-    $(document).ready(function(){
+    /*$(document).ready(function(){
         sidebarToggle();
-    })
+    })*/
 
     function sidebarToggle(){
         $("div#wrapper").toggleClass("toggled");
