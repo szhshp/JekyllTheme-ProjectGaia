@@ -6,10 +6,13 @@
 
 ## TODO
 
-- Post Searcher
+- LightBox 
 - Global Music
 
 ## Change Log
+
+- **Dec 20th 2017**
+Added post searchbox
 
 - **Aug 20th, 2017**
 Added post plugin configuration
