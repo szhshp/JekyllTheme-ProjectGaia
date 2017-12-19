@@ -2,7 +2,12 @@
 
 ## Documents
 
-[    Documents   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs/#/)
+[    Click to see Documents   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs/#/)
+
+## TODO
+
+- Post Searcher
+- Global Music
 
 ## Change Log
 
