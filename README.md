@@ -12,6 +12,9 @@
 ## Change Log
 
 - **Dec 20th 2017**
+Integrated Lightbox
+
+- **Dec 19th 2017**
 Added post searchbox
 
 - **Aug 20th, 2017**
@@ -24,7 +27,7 @@ Added a reading progressbar for post page.
 Updated font page
 Added global font style
 
-- **April 3nd, 2017**
+- **Apr 3nd, 2017**
 Added new font
 
 - **Mar 5th, 2017**
