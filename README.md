@@ -4,10 +4,6 @@
 
 [    Click to see Documents   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs/#/)
 
-## TODO
-
-- LightBox 
-- Global Music
 
 ## Change Log
 
