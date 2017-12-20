@@ -5,7 +5,8 @@
     syntaxHighlighter: true,
     toc: true,
     headerNumber: true,
-    readingProgressBar: true
+    readingProgressBar: true,
+    lightbox: true
   }
 
   /*HighLighter: we can't put these in onReady */
@@ -29,9 +30,34 @@
   }
 
   /* Highlighter callback: run headerCollapsible()*/
-    SyntaxHighlighter.complete(function(){
-     headerCollapsible();
+  SyntaxHighlighter.complete(function(){
+   headerCollapsible();
+  });
+
+  /* init pic lightbox*/
+  function lightbox(){
+
+    if (!config.lightbox) return;
+
+    $('#post-content img').each(function(index, val) {
+
+        var link = $('<a></a>').attr({
+          'rel': 'lightbox',
+          'href': $(val).attr('src'),
+          'data-lightbox':"roadtrip"
+        });
+
+        /* if image has title */
+        if ($(val).siblings('em')!=null) {
+          link.attr('title', $(val).next('em').html());
+        }
+
+        $(val).parent().prepend(link);
+        link.append($(val)); /* move img inside link */
+
+        $(val).addClass('img-fluid'); /* add BS4 image fluid class */
     });
+  }
 
   function headerCollapsible(){
 
@@ -105,5 +131,6 @@
       headerNumber('post-content');
       $('#toc').trigger('click');
       initReadingProgressBar();
+      lightbox();
   });
 } ());
