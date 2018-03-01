@@ -7,7 +7,9 @@
 
 ## Change Log
 
-- **Dec 20th 2017**
+- **Mar 1st 2018**
+Updated sidebar to a smooth style.
+
 Integrated Lightbox
 
 - **Dec 19th 2017**
