@@ -1,15 +1,8 @@
-/*!
- * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
- body {
+body {
     overflow-x: hidden;
 }
 
-/* Toggle Styles */
-
+/* collapsed style */
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -17,58 +10,63 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
-#wrapper.toggled {
-    /* padding-right: 250px; */
-}
-
-#sidebar-wrapper {
+aside{
+    position:fixed;
     z-index: 1000;
-    position: fixed;
-    margin-right: -50px;
-    opacity: 0;
-    right: 0px;
-    height: 100%;
-    overflow-x: hidden;
+    top:0;
+    bottom:0;
+    right:-250px;
+    width:250px;
     background: rgba(0, 0, 0, 0.92);
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    -moz-box-shadow: -3px 0px 5px rgba(0,0,0,0.8);
-    box-shadow: -3px 0px 5px rgba(0,0,0,0.8);
+    transition:0.5s ease;
+    -webkit-transition:0.5s ease;
 }
-
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-    margin-right: 0px;
-    opacity: 1;
-    visibility: visible;
-}
-
 #page-content-wrapper {
     width: 100%;
 }
-
-#wrapper.toggled #page-content-wrapper {
-    margin-right: -250px;
+a#menu-toggle {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    color: white;
+    border: 2px solid white;
+    z-index: 1001;
+    background: grey;
 }
 
-/* Sidebar Styles */
 
+/* toggled style */
+body.toggled aside{ 
+    right:0; 
+}
+body.toggled #wrapper{ 
+    padding-right:250px; 
+}
+body.toggled a#menu-toggle {
+    border: none;
+    background: none;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: 3;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -moz-animation-iteration-count: 3;
+}
+
+
+/* Sidebar Styles */
 .sidebar-nav {
     text-align: left;
     width: 250px;
     margin: 0;
     font-size: 18px;
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 0px;
     list-style: none;
 }
 
 .sidebar-nav li {
-    line-height: 35px;
+    line-height: 30px;
     /* margin-left: 20px; */
     /* margin-right: 20px; */
 }
@@ -121,31 +119,9 @@
         padding-right: 0px;
     }
 
-    #wrapper.toggled {
-        /* padding-right: 250px; */
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-        margin-right: -50px;
-        opacity: 0;
-        visibility: hidden;
-    }
-
     img.site-author-image {
         width: 90px;
         height: 90px;
-    }
-
-
-    #page-content-wrapper {
-        padding: 0px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
     }
 }
 
@@ -162,17 +138,3 @@ div#sidebar-wrapper a.nav-link {
     cursor: pointer;
 }
 
-a#menu-toggle {
-    position: fixed;
-    top: 1%;
-    right: 1%;
-    color: white;
-    border: 2px solid white;
-    z-index: 1001;
-    background: grey;
-}
-
-a#menu-toggle.toggled {
-    border: none;
-    background: none;
-}
