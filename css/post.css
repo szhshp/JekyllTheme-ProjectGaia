@@ -1,3 +1,13 @@
 div#reading-progress{
   height: 5px;
 }
+
+div#reading-progress {
+  height: 3px
+}
+
+@media(min-width:1024px) {
+    div#post-content{
+        width: 70vw
+    }
+}
