@@ -1,1 +1,6 @@
 _site
+node_modules
+.jekyll-cache
+.sass-cache
+/Gemfile.lock
+/Gemfile

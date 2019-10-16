@@ -1,136 +1,83 @@
 (function () {
 
-  var config = {
-    headerCollapsibleActive: true,
-    syntaxHighlighter: true,
-    toc: true,
-    headerNumber: true,
-    readingProgressBar: true,
-    lightbox: true
+
+  function initHighlighter() {
+    hljs.initHighlightingOnLoad()
   }
 
-  /*HighLighter: we can't put these in onReady */
-  var count = SyntaxHighlighter.findElements().length,
-  now = 0;
-  SyntaxHighlighter.complete = function(callback){
-      (function wait() {
-          setTimeout(function () {
-              now = $('.syntaxhighlighter');
-              if (now.length < count) {
-                  wait();
-              } else {
-                  callback();
-              }
-          }, 200);
-      })();
-  };
-
-  if (config.syntaxHighlighter) {
-    SyntaxHighlighter.all();
-  }
-
-  /* Highlighter callback: run headerCollapsible()*/
-  SyntaxHighlighter.complete(function(){
-   headerCollapsible();
-  });
-
-  /* init pic lightbox*/
-  function lightbox(){
-
-    if (!config.lightbox) return;
-
-    $('#post-content img').each(function(index, val) {
-
-        var link = $('<a></a>').attr({
-          'rel': 'lightbox',
-          'href': $(val).attr('src'),
-          'data-lightbox':"roadtrip"
-        });
-
-        /* if image has title */
-        if ($(val).siblings('em')!=null) {
-          link.attr('title', $(val).next('em').html());
-        }
-
-        $(val).parent().prepend(link);
-        link.append($(val)); /* move img inside link */
-
-        $(val).addClass('img-fluid'); /* add BS4 image fluid class */
-    });
-  }
-
-  function headerCollapsible(){
-
-    if (!config.headerCollapsibleActive) return;
-
-    $.headerCollapseRobot(
-      arr_Id_CollapseEnds =  new Array("content-end"),
-      arr_Collapsible_Tag = new Array("H1","H2","H3"),
-      arr_ExcludeElemPrefix_InCollapsible  = new Array("comment-"),
-      arr_ExcludeElemPrefix_InCollapsing = new Array("sidebar-toc-Ik4D-")
-      )
+  function headerCollapse() {
+    $.headerCollapseRobot('#page-content', ['h1', 'h2', 'h3'], ['blockquote']);
   }
 
   function headerNumber(postContentDivID) {
-
-    if (!config.headerNumber) return;
-
-    var headerIndex = [0,0];  /*for h2,h3*/
-    $('#'+postContentDivID).find('h2:not(blockquote h2),h3:not(blockquote h3)').each(function(index, el) {
+    var headerIndex = [0, 0, 0, 0, 0]; /*for h2~h6*/
+    $('#' + postContentDivID).find('h2:not(blockquote h2),h3:not(blockquote h3),h4:not(blockquote h4),h5:not(blockquote h5),h6:not(blockquote h6)').each(function (index, el) {
 
       if ($(el).is('H2')) {
-        $(el).text( (++headerIndex[0])+'. '+$(el).text());
-        headerIndex[1]=0;
-      }else if ($(el).is('H3')) {
-        $(el).text( headerIndex[0]+'.'+ (++headerIndex[1])+'. '+$(el).text());
+        $(el).text((++headerIndex[0]) + '. ' + $(el).text());
+        headerIndex[1] = 0;
+      } else if ($(el).is('H3')) {
+        $(el).text(headerIndex[0] + '.' + (++headerIndex[1]) + '. ' + $(el).text());
+        headerIndex[2] = 0;
+      } else if ($(el).is('H4')) {
+        $(el).text(headerIndex[0] + '.' + (headerIndex[1]) + '.' + (++headerIndex[2]) + '. ' + $(el).text());
+        headerIndex[3] = 0;
       }
     });
   }
 
-  function toc(tocDivID){
+  function toc(tocDivID, contentID) {
+    tocbot.init({
+      tocSelector: '#' + tocDivID,
+      contentSelector: '#' + contentID,
+      headingSelector: 'h1, h2, h3',
+      smoothScroll: true,
+      smoothScrollDuration: 420
+    });
+  }
 
-    if (!config.toc) return;
+  /* init pic lightbox*/
+  function lightbox() {
+    $('#page-content img').each(function (index, val) {
 
-    var headerIndex = new Array(0,0,0);
-    $('#'+tocDivID).toc({
-          'selectors': 'h1:not(blockquote h1),h2:not(blockquote h2),h3:not(blockquote h3)', //elements to use as headings
-          'prefix': 'toc', //prefix for anchor tags and class names
-          'headerText': function(i, heading, $heading) { //custom function building the header-item text
-            if ($heading.is("h2")){
-              headerIndex[1]=0;
-              return (++headerIndex[0])+'. '+$heading.text();
-            }else if ($heading.is("h3")) {
-              return (headerIndex[0])+'.'+(++headerIndex[1])+'. '+$heading.text();
-            }
-            return  $heading.text();
-          }
+      var link = $('<a></a>').attr({
+        'rel': 'lightbox',
+        'href': $(val).attr('src'),
+        'data-lightbox': "roadtrip"
       });
+
+      /* if image has title */
+      if ($(val).siblings('em') != null) {
+        link.attr('title', $(val).next('em').html());
+      }
+
+      $(val).parent().prepend(link);
+      link.append($(val)); /* move img inside link */
+
+      $(val).addClass('img-fluid'); /* add BS4 image fluid class */
+    });
   }
 
   function initReadingProgressBar() {
+    $(window).bind('scroll', function () {
+      var percent = $(window).scrollTop() / ($('body').height() - $(window).height())
+      $('div#reading-progress').find('.progress-bar').css('width', percent * 100 + '%')
+    });
+  }
 
-    if (!config.readingProgressBar) {
-       $('div#reading-progress').hide();
-       return;
-    }
+  $(document).ready(function () {
+    $('#toc').toggleClass('d-none');
+    $('#sidebar-wrapper nav a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+    headerNumber('page-content');
+    initHighlighter();
+    headerCollapse();
 
-  $(window).bind('scroll', function() {
-    var percent = $(window).scrollTop()/($('body').height()-$(window).height())
-    $('div#reading-progress').find('.progress-bar').css('width',percent*100+'%')
+    $('#toc').trigger('click');
+    toc('sidebar-toc-content', 'page-content-wrapper');
+    lightbox();
+    initReadingProgressBar();
   });
-}
-
-
-  $(document).ready(function(){
-      $('#toc').toggleClass('hidden-xl-down');
-      $('#sidebar-wrapper nav a').click(function (e) {
-          e.preventDefault()
-          $(this).tab('show')
-      })
-      toc('sidebar-toc-content');
-      headerNumber('post-content');
-      $('#toc').trigger('click');
-      initReadingProgressBar();
-      lightbox();
-  });
-} ());
+}());

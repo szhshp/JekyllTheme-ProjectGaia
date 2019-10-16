@@ -1,0 +1,26 @@
+---
+---
+
+@import "colors";
+@import "mixins";
+
+div.pagination {
+  a {
+    padding: 2px;
+    margin: 5px;
+    color: $blue !important;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    &.jp-disabled {
+      color: $grey !important;
+      cursor: not-allowed;
+    }
+    &.jp-current {
+      color: $white !important;
+      background: $lightblue;
+    }
+  }
+}

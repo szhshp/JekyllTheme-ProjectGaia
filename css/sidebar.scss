@@ -1,0 +1,122 @@
+--- 
+---
+
+@import "colors";
+@import "mixins";
+
+$sidebarWidth: 250px;
+
+body {
+  overflow-x: hidden;
+}
+
+@media (min-width: 576px) {
+  /* body */
+  #wrapper {
+    @include transition(all 1s ease);
+  }
+
+  /* sidebar */
+  aside {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: -1 * $sidebarWidth;
+    width: $sidebarWidth;
+    @include transition(all 1s ease);
+    @include box-shadow(-3px 0px 10px $deepgrey);
+    background: $darkblue;
+  }
+
+  #page-content-wrapper {
+    width: 100%;
+  }
+
+  a#menu-toggle {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    color: $white;
+    border: 2px solid $white;
+    z-index: 1001;
+    background: grey;
+  }
+
+  /* toggled style */
+  body.toggled {
+    aside {
+      right: 0;
+    }
+
+    #wrapper {
+      padding-right: 250px;
+    }
+
+    a#menu-toggle {
+      border: none;
+      background: none;
+      @include animation(1s, 1s, 3);
+    }
+  }
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+  text-align: left;
+  width: 250px;
+  margin: 0;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-left: 0px;
+  list-style: none;
+
+  li {
+    line-height: 25px;
+    font-size: 17px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #999999;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background: $midgrey;
+      }
+
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  i.fa {
+    width: 30px;
+  }
+}
+
+div#sidebar-wrapper {
+  img.site-author-image {
+    width: 90px;
+    height: 90px;
+  }
+  
+  a.nav-link {
+    background-color: transparent;
+    color: $lightgrey;
+    font-size: 16px;
+    cursor: pointer;
+
+    &.active {
+      background: transparent;
+      border-radius: 0px;
+      color: $orange;
+      border-bottom: 1px solid $orange;
+    }
+  }
+}

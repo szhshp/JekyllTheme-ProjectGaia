@@ -1,32 +1,35 @@
- 
 <!-- Toggle Button -->
- <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
-     <i class="fa fa-bars" aria-hidden="true"></i>
- </a>
+<a class="btn btn-sm d-none d-sm-block animated flash" id="menu-toggle" data-toggle="tooltip" data-placement="right">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+</a>
 
- <!-- Sidebar for desktop -->
- <aside class="hidden-xs-down">
-     <div id="sidebar-wrapper">
-        <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
-            <a class="flex-sm-fill text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab" id="home">Home</a>
-            <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
+<!-- Sidebar for wide screen -->
+<aside class="d-lg-block d-md-block d-none d-sm-block">
+    <div id="sidebar-wrapper">
+        <nav class="nav nav-pills flex-sm-row p-1 justify-content-center">
+            <a class="text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab"
+                id="home">Home</a>
+            <a class="text-sm-center nav-link d-none" href="#sidebar-toc-content" data-toggle="tab" role="tab"
+                id="toc">TOC</a>
         </nav>
         <div class="tab-content" id=tab-content>
-            <div class="tab-pane text-sm-center active" id="sidebar-home-content">
-                <img class="site-author-image m-2" itemprop="image" src=" http://comic.szhshp.org/comic/10101/headshot/0 (2).png">
+            <div class="tab-pane text-sm-center active animated fadeIn" id="sidebar-home-content">
+                <img class="site-author-image" itemprop="image" src="/img/headshot.png">
                 <div class="text-warning">Szhshp</div>
+                <div class="text-white">To be different.</div>
                 {% include nav-links.html %}
             </div>
-            <div class="tab-pane fade text-sm-left" id="sidebar-toc-content">
+            <div class="tab-pane fade text-sm-left animated fadeIn" id="sidebar-toc-content">
             </div>
         </div>
     </div>
 </aside>
 
 <!-- Navbar for xsmall screen  -->
-<div class="hidden-sm-up">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<div class="d-sm-none">
+    <nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">{{site.title}}</a>

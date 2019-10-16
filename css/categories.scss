@@ -1,0 +1,12 @@
+--- 
+--- 
+@import "colors";
+@import "mixins";
+
+#posts {
+  li.list-group-item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

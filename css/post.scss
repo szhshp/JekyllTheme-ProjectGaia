@@ -1,0 +1,30 @@
+---
+---
+
+@import "colors";
+@import "mixins";
+
+div#post-content {
+  .table {
+    td,
+    th {
+      border: 1px solid grey;
+    }
+    thead th {
+      border: 1px solid grey;
+    }
+  }
+}
+
+div#reading-progress {
+  height: 3px;
+}
+
+div#post-content {
+  @media (min-width: 1024px) {
+    width: 70vw;
+  }
+  @media (min-width: 1200px) {
+    text-shadow: 0.5px 0.5px 1px black !important;
+  }
+}

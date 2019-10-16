@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{site.title}}</title>
 
+
     {% include global-css.html %}
+
+    <link href="{{site.url}}{{site.baseurl}}/css/jPages.css" rel='stylesheet' type="text/css"/>
 
 </head>
 <body>
 
-    <div id="wrapper" >
+    <div id="wrapper" class="animated fadeIn">
 
-       {% include navbar.html %}
-       {% include about-messager.html %}
-       {% include comment-full.html %}
-       {% include footer.html %}
+        {% include navbar.html %}
+        {% include about.html %}
+        {% include comment-full.html %}
+        {% include footer.html %}
 
     </div>
 
     {% include global-js.html %}
 
    <script src="{{site.url}}{{site.baseurl}}/js/sidebar.js" type="text/javascript"></script>
+   <script src="{{site.url}}{{site.baseurl}}/js/jPages.min.js"></script>
 
 </body>
 </html>

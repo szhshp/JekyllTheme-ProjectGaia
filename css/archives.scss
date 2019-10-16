@@ -1,0 +1,62 @@
+---
+---
+@import "colors";
+@import "mixins";
+
+.ant-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.ant-timeline-item {
+  position: relative;
+  padding: 0 0 14px;
+  list-style: none;
+  margin: 0;
+  /* text-overflow: ellipsis; */
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
+
+.ant-timeline-item-head {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  margin-top: 5px;
+}
+
+.ant-timeline-item-head-blue {
+  border-color: $lightblue;
+  color: $lightblue
+}
+
+.ant-timeline-item-content {
+  padding: 2px 0px 0px 24px;
+  font-size: 14px;
+  position: relative;
+  top: -3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div#recentComments {
+  font-size: smaller;
+  line-height: 20px;
+  opacity: 0;
+  transition: all 1s ease;
+  &.show{
+    opacity: 1;
+  }
+}
+
+div.headshot img {
+  width: 150px!important;
+}
+
+input#post-search{
+  background: transparent;
+}

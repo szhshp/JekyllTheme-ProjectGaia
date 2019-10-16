@@ -1,63 +1,84 @@
-  <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8 col-sm-12">
-                        <div class="page-header" id="archives">
-                            <h3 class="d-inline">Archives</h3>
-                            <input type="text" class="d-inline form-control ml-3 w-50" id="post-search" placeholder="Press enter to search..." autocomplete="off">
-                        </div>
-                        <ul class="ant-timeline" id="archivelist">
-
-
-                            {% comment %} Stickie list {% endcomment %}
-                            {% for post in site.posts %}
-
-                            {% if post.stickie != true %}
-                            {% continue %}
-                            {% endif %}
-
-
-                            <li class="ant-timeline-item">
-                                <div class="ant-timeline-item-content">
-                                    <span class="text-danger">{{ post.date | date: "%Y-%m-%d" }} </span>
-                                    <div class="d-flex align-items-center post-title">
-                                     <a class="post-link text-danger h5 text-danger" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                                    </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-
-
-                            {% comment %} Normal post list {% endcomment %}
-                            {% for post in site.posts %}
-
-                            {% comment %} If it already showed in stickie list {% endcomment %}
-                            {% if post.stickie == true %}
-                            {% continue %}
-                            {% endif %}
-
-                            <li class="ant-timeline-item">
-                                <div class="ant-timeline-item-content">
-                                    <span class="text-primary">{{ post.date | date: "%Y-%m-%d" }} </span>
-                                    <div class="d-flex align-items-center post-title">
-                                        <a class="post-link h5 text-primary" href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
-                                     </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="page-header" id="archives">
-                            <h4>Other Blocks A</h4>
-                        </div>
-                        <p>szhshp is awesome</p>
-                        <div class="page-header" id="archives">
-                            <h4>Other Blocks B</h4>
-                        </div>
-                        <p>szhshp is awesome</p>
-                    </div>
-            </div>
+<!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="page-header d-flex justify-content-between align-items-center" id="archives">
+          <h3 class="">Archives</h3>
+          <input type="text" class="form-control ml-3 w-50 form-control-sm" id="post-search"
+            placeholder="Press enter to search..." autocomplete="off">
         </div>
-        <!-- /#page-content-wrapper -->
+
+        <ul class="ant-timeline" id="archivelist">
+
+          {% comment %} Stickie list {% endcomment %}
+          {% for post in site.posts %}
+
+          {% if post.stickie != true %}
+          {% continue %}
+          {% endif %}
+
+          {% if post.hideinpostslist == true %}
+          {% continue %}
+          {% endif %}
+
+
+          <li class="ant-timeline-item">
+            <!-- index start from 1 -->
+            <div class="ant-timeline-item-head ant-timeline-item-head-blue">
+            </div>
+            <div class="ant-timeline-item-content">
+              <span class="badge badge-danger d-lg-inline-block d-none">{{ post.date | date: "%Y-%m-%d" }} </span>
+              <span class="align-items-center post-title">
+                <a class="post-link text-danger h6 text-danger font-weight-bold"
+                  href="{{ post.url}}">{{ post.title }}</a>
+              </span>
+            </div>
+          </li>
+          {% endfor %}
+
+
+          {% comment %} Normal post list {% endcomment %}
+          {% for post in site.posts %}
+
+          {% comment %} If we dont wanna it show in post list{% endcomment %}
+          {% if post.hideinpostslist == true %}
+          {% continue %}
+          {% endif %}
+
+          {% comment %} If it already showed in stickie list {% endcomment %}
+          {% if post.stickie == true %}
+          {% continue %}
+          {% endif %}
+
+          <li class="ant-timeline-item">
+            <!-- index start from 1 -->
+            <div class="ant-timeline-item-head ant-timeline-item-head-blue">
+            </div>
+            <div class="ant-timeline-item-content">
+              <span class="badge badge-primary d-lg-inline-block d-none">{{ post.date | date: "%Y-%m-%d" }} </span>
+              <span class="align-items-center post-title">
+                <a class="post-link h6 font-weight-bold" href="{{ post.url}}">{{ post.title }}</a>
+              </span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="pagination"></div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="page-header">
+          <h3>Header A</h3>
+        </div>
+        <div>szhshp is awesome</div>
+
+        <div class="page-header">
+          <h3>Header B</h3>
+        </div>
+        <div>szhshp is awesome</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#page-content-wrapper -->

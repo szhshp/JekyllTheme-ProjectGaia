@@ -2,26 +2,25 @@
 <div id="page-content-wrapper">
     <div class="container-fluid" id="post-content">
         <div class="row">
-            <div class="col-md-12">
-              <div class="progress fixed-top" id="reading-progress">
+            <div class="col-md-12 animated fadeIn delay-2s">
+                <div class="progress fixed-top" id="reading-progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="page-header">
-                    <h1 class="text-danger">
+                    <h1 class="text-primary">
                         {{ page.title }}
                     </h1>
                     {{ page.date | date: "%Y-%m-%d" }}
                 </div>
-                {{ page.content | markdownify }}
+                <div id="page-content">
+                    {{ page.content | markdownify }}
+                </div>
 
-                <!-- don't delete this div, this is marked as the end position of collapse plugin  -->
+                <!-- don't delete this div as this is header collapse end identified  -->
                 <div id="content-end"></div>
-                <div class="page-header">
-                   <span>Comment Box</span>
-               </div>
-                <div>(update the code to your comment plugin in comment-full.html)</div>
             </div>
 
         </div>
     </div>
+</div>
 <!-- /#page-content-wrapper -->

@@ -1,0 +1,29 @@
+---
+---
+
+@import "colors";
+@import "mixins";
+
+i.headerbtn {
+  font-size: 16px;
+  position: relative;
+  margin-left: -1rem;
+  padding-right: 5px;
+  color: $deepgrey;
+  @include transition(opacity 1s);
+  opacity: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+h1,
+h2,
+h3 {
+  &:hover {
+    i.headerbtn {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

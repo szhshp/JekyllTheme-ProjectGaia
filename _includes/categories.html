@@ -1,63 +1,64 @@
 <div id="page-content-wrapper">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-
-        <div class="page-header" id="categories">
-          <h3>Categories </h3>
-        </div>
-        <div id="categories" class="categories" role="tablist" aria-multiselectable="false">
-          {% for cat in site.categories %}
-          <div class="card">
-            <div class="card-header border-0" role="tab" id="{{cat[0]}}header">
-              <h5 class="mb-0">
-                <a name="c_{{cat[0]}}" class="collapsed text-white" data-toggle="collapse" data-parent="#categories" href="#c_{{cat[0]}}" aria-expanded="false" aria-controls="c_{{cat[0]}}">{{ cat[0] }}
-                  <span class="badge ml-2 text-white">{{ cat[1].size }}</span>
-                </a>
-              </h5>
-            </div>
-
-            <div id="c_{{cat[0]}}" class="collapse" role="tabpanel" aria-labelledby="{{cat[0]}}header">
-              <div class="card-block">
-                {% for post in cat[1] %}
-                <div class="text-white"> {{ post.date | date: "%Y-%m-%d" }} 
-                <a class="text-white ml-3" href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> 
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+      <div class="col-md-12" id="categories">
+        <div class="page-header">
+          <h3>Categories</h3>
         </div>
 
+        {% for cat in site.categories %}
 
+        <a class="badge badge-secondary" data-toggle="collapse" href="#c_{{cat[0]}}" aria-expanded="false"
+          aria-controls="c_{{cat[0]}}">
+          {{ cat[0] }}<sup>{{ cat[1].size }}</sup>
+        </a>
+        {% endfor %}
       </div>
-      <div class="col-md-6">
-        <div class="page-header" id="tags">
+
+      <div class="col-md-12" id="tags">
+        <div class="page-header">
           <h3>Tags</h3>
         </div>
-        <div id="tags" class="categories" role="tablist" aria-multiselectable="false">
-          {% for tag in site.tags %}
-          <div class="card">
-            <div class="card-header border-0" role="tab" id="{{tag[0]}}header">
-              <h5 class="mb-0">
-                <a name="t_{{tag[0]}}" class="collapsed text-white" data-toggle="collapse" data-parent="#tags" href="#t_{{tag[0]}}" aria-expanded="false" aria-controls="t_{{tag[0]}}">{{ tag[0] }}
-                  <span class="badge ml-2 text-white">{{ tag[1].size }}</span>
-                </a>
-              </h5>
-            </div>
+        {% for tag in site.tags %}
+        <a class="badge badge-secondary" data-toggle="collapse" href="#t_{{tag[0]}}" aria-expanded="false"
+          aria-controls="t{{tag[0]}}">
+          {{ tag[0] }}<sup>{{ tag[1].size }}</sup>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
 
-            <div id="t_{{tag[0]}}" class="collapse" role="tabpanel" aria-labelledby="{{tag[0]}}header">
-              <div class="card-block">
-                {% for post in tag[1] %}
-                <div class="text-white"> {{ post.date | date: "%Y-%m-%d" }} 
-                <a class="text-white ml-3" href="{{site.url}}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> </div>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+
+    <div class="row pt-5" id="posts" class="accordion">
+      <div class="w-100">
+        <!-- DO NOT DELETE ABOVE DIV -->
+        {% for cat in site.categories %}
+        <div class="col-12 collapse" id="c_{{cat[0]}}" aria-labelledby="c_{{cat[0]}}" data-parent="#posts">
+          <ul class="list-group">
+            {% for post in cat[1] %}
+            <li class="list-group-item list-group-item-secondary">
+              <a href="{{ post.url }}" class="text-dark">
+                {{ post.date | date: "%Y-%m-%d" }} <b>{{ post.title }}</b>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
         </div>
+        {% endfor %}
+
+        {% for tag in site.tags %}
+        <div class="col-12 collapse" id="t_{{tag[0]}}" aria-labelledby="t_{{tag[0]}}" data-parent="#posts">
+          <ul class="list-group">
+            {% for post in tag[1] %}
+            <li class="list-group-item list-group-item-secondary">
+              <a href="{{ post.url }}" class="text-dark">
+                {{ post.date | date: "%Y-%m-%d" }} <b>{{ post.title }}</b>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

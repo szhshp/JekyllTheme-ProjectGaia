@@ -29,7 +29,6 @@ body, input, textarea, keygen, select, button {
   font-feature-settings: "liga", "kern";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-      text-shadow:0.03em 0.03em 0.03em #000 !important
 }
 
 

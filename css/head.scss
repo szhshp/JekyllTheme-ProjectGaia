@@ -1,0 +1,18 @@
+---
+---
+
+@import "headBackground";
+
+#jumbotron {
+  background: url($headBackground) no-repeat center center scroll;
+  background-size: 100% 100%;
+  @media (min-width: 800px) {
+    height: 110vh;
+  }
+  @media (max-width: 800px) {
+    height: 100%;
+  }
+  div#blurBox {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
