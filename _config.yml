@@ -2,7 +2,7 @@
 # Site settings
 title: 
 email: 
-baseurl: "/JekyllTheme-ProjectGaia" # the subpath of your site, e.g. /blog/
+baseurl: "/JekyllTheme-ProjectGaia/" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 markdown: kramdown
