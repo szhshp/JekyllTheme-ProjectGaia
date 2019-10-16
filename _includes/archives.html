@@ -31,7 +31,7 @@
               <span class="badge badge-danger d-lg-inline-block d-none">{{ post.date | date: "%Y-%m-%d" }} </span>
               <span class="align-items-center post-title">
                 <a class="post-link text-danger h6 text-danger font-weight-bold"
-                  href="{{ post.url}}">{{ post.title }}</a>
+                  href="{{site.url}}{{site.baseurl}}{{ post.url}}">{{ post.title }}</a>
               </span>
             </div>
           </li>
