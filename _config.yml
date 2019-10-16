@@ -1,12 +1,12 @@
 
 # Site settings
-title: szhshp的第三边境研究所
-email: 24031shp@sina.com
+title: 
+email: 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 markdown: kramdown
-# toc_levels: 1..2
+# toc_levels: 1……2
 
 # paginate: 10
 # paginate_path: ":num"
