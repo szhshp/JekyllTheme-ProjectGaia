@@ -1,5 +1,11 @@
 (function () {
-
+  let config = {
+    activeHighlight: true,
+    activeHeaderCollapse: true,
+    activeHeaderNumber: true,
+    activeLightbox: true,
+    activeReadingProgressBar: true,
+  }
 
   function initHighlighter() {
     hljs.initHighlightingOnLoad()
@@ -71,13 +77,15 @@
       e.preventDefault();
       $(this).tab('show');
     });
-    headerNumber('page-content');
-    initHighlighter();
-    headerCollapse();
+    if(config.activeHeaderNumber) headerNumber('page-content');
+
+    if(config.activeHighlight) initHighlighter();
+    if(config.activeHeaderCollapse) headerCollapse();
 
     $('#toc').trigger('click');
     toc('sidebar-toc-content', 'page-content-wrapper');
-    lightbox();
-    initReadingProgressBar();
+
+    if (config.activeLightbox) lightbox();
+    if (config.activeReadingProgressBar) initReadingProgressBar();
   });
 }());
