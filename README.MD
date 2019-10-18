@@ -1,6 +1,12 @@
 # Project Gaia
 
-[  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
+- [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
+- [Usage] (https://szhielelp.github.io/JekyllTheme-ProjectGaia/category1/2019/10/16/1.html)
+
+
+<hr>
+
+
 
 <div align=center><img src="/img/logo.png"/></div>
 
