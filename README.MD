@@ -22,7 +22,7 @@
 ## Documents
 
 - [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
-- [Usage](https://szhielelp.github.io/JekyllTheme-ProjectGaia/category1/2019/10/16/1.html)
+- [Documents](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs)
 
 
 
