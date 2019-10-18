@@ -2,20 +2,30 @@
 
 [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
 
-<div align=center><img width="150" height="150" src="/img/logo.png"/></div>
+<div align=center><img src="/img/logo.png"/></div>
+
+
+
+<p align="center">
+  <img src=https://img.shields.io/badge/License-MIT-orange"/>
+  <img src="https://img.shields.io/badge/Version-2.0-green"/>
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/szhielelp/JekyllTheme-ProjectGaia">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/szhielelp/JekyllTheme-ProjectGaia">
+</p>
+
+
 
 
 
 ## Documents
 
-[    Click to see Documents   ](https://szhielelp.github.io/JekyllTheme-ProjectGaia-Docs/#/)
+Documents coming soon.
 
 
 ## Change Log
 
 - **Oct 18th 2019**
-Version 2 Beta Released !! Check it out -> [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
-
+Version 2 Beta Released!! Check it out -> [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
 
 - **Mar 3rd 2018**
 Fixed critical styles issues
