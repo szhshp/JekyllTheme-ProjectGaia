@@ -1,10 +1,8 @@
 # Project Gaia
 
-- [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
-- [Usage](https://szhielelp.github.io/JekyllTheme-ProjectGaia/category1/2019/10/16/1.html)
 
 
-<hr>
+
 
 
 
@@ -18,14 +16,18 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/szhielelp/JekyllTheme-ProjectGaia">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/szhielelp/JekyllTheme-ProjectGaia">
 </p>
-
-
-
+                                                                                                                                                                                                                                         
 
 
 ## Documents
 
-Documents coming soon.
+- [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
+- [Usage](https://szhielelp.github.io/JekyllTheme-ProjectGaia/category1/2019/10/16/1.html)
+
+
+
+
+
 
 
 ## Change Log
