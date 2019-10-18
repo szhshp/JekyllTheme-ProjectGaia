@@ -1,7 +1,7 @@
 # Project Gaia
 
 - [  Demo Page     ](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
-- [Usage] (https://szhielelp.github.io/JekyllTheme-ProjectGaia/category1/2019/10/16/1.html)
+- [Usage](https://szhielelp.github.io/JekyllTheme-ProjectGaia/category1/2019/10/16/1.html)
 
 
 <hr>
