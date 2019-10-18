@@ -47,14 +47,13 @@
     $('#page-content img').each(function (index, val) {
 
       var link = $('<a></a>').attr({
-        'rel': 'lightbox',
         'href': $(val).attr('src'),
-        'data-lightbox': "roadtrip"
+        'data-lightbox': "image"
       });
 
       /* if image has title */
       if ($(val).siblings('em') != null) {
-        link.attr('title', $(val).next('em').html());
+        link.data('title', $(val).next('em').html());
       }
 
       $(val).parent().prepend(link);
@@ -78,6 +77,7 @@
       $(this).tab('show');
     });
     if(config.activeHeaderNumber) headerNumber('page-content');
+    if (config.activeLightbox) lightbox();
 
     if(config.activeHighlight) initHighlighter();
     if(config.activeHeaderCollapse) headerCollapse();
@@ -85,7 +85,6 @@
     $('#toc').trigger('click');
     toc('sidebar-toc-content', 'page-content-wrapper');
 
-    if (config.activeLightbox) lightbox();
     if (config.activeReadingProgressBar) initReadingProgressBar();
   });
 }());
