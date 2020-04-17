@@ -9,15 +9,15 @@
 <div align=center><img src="/img/logo.png"/></div>
 
 
-
 <p align="center">
-  <img src=https://img.shields.io/badge/License-MIT-orange"/>
+  <img src="https://img.shields.io/badge/link-996.icu-red.svg"/>
+  <img src="https://img.shields.io/badge/license-Anti%20996-blue.svg"/>
+  <img src="https://img.shields.io/badge/License-MIT-orange"/>
   <img src="https://img.shields.io/badge/Version-2.0-green"/>
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/szhielelp/JekyllTheme-ProjectGaia">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/szhielelp/JekyllTheme-ProjectGaia">
 </p>
-                                                                                                                                                                                                                                         
-
+                                                                                                                                         
 
 ## Documents
 
