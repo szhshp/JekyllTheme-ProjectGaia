@@ -1,18 +1,25 @@
 >
 ># News (2020 July)
 >
->**No more maintenance for this repo.** 
+> **No more maintenance for this repo.** 
 >
 > I have something new for you: [Project Titan](https://github.com/szhielelp/NextJS-BlogTemplate-ProjectTitan)
 >
->**Project Titan** is built with NextJS x Material UI x Typescript, with entirely SAME styles as Project Gaia.
+> **Project Titan** is built with NextJS x Material UI x Typescript, with SAME styles as Project Gaia.
 >
->You can migrate to Project Titan from Project Gaia seamlessly. You can [build a markdown site with Project Titan in ONLY 5 STEPS](https://titan.szhshp.org/tech/2021/05/30/Document-Main#Try-it-out)
+> You can migrate to Project Titan from Project Gaia seamlessly. You can [build a markdown site with Project Titan in ONLY 5 STEPS](https://titan.szhshp.org/tech/2021/05/30/Document-Main#Try-it-out)
 >
 >Check below two sites then you can see the differences:
 >
 >- Project Titan: [https://szhshp.org](https://szhshp.org)
 >- Project Gaia: [https://legacy.szhshp.org](https://legacy.szhshp.org)
+
+
+
+
+
+
+----------------------
 
 # Project Gaia
 
