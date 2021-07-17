@@ -12,7 +12,7 @@
 >Check below two sites then you can see the differences:
 >
 >- Project Titan: [https://szhshp.org](https://szhshp.org)
->- Project Gaia: [https://legacy.szhshp.org](https://legacy.szhshp.org)
+>- Project Gaia: [https://szhielelp.github.io/JekyllTheme-ProjectGaia/](https://szhielelp.github.io/JekyllTheme-ProjectGaia/)
 
 
 
